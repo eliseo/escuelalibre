@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: jQuery Form Validation</title>
+	
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ga.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"></script>
+	-->
+	
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid-12.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/tables.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/visualize.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body>
+<div id="page-body">
+	<div id="wrapperbg">
+		<div id="wrapper">
+			<header>
+				<!-- horizontal multilevel menu [begin] -->
+				<nav id="menu">
+					<ul class="menu">
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/home.png" alt="" /></a>
+							<ul>
+								<li><a href="#">Sub Item 2</a></li>
+								<li><a href="#">Sub Item 3</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/user-1.png" alt="" /></a>
+							<ul>
+								<li class="parent"><a href="#">Sub Item 1</a>
+									<ul>
+										<li><a href="#">Sub Item 1.1</a></li>
+										<li><a href="#">Sub Item 1.2</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="#">Sub Item 2</a>
+								   <ul>
+										<li><a href="#">Sub Item 2.1</a></li>
+										<li><a href="#">Sub Item 2.2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sub Item 3</a></li>
+								<li><a href="#">Sub Item 4</a></li>
+								<li><a href="#">Sub Item 5</a></li>
+								<li><a href="#">Sub Item 6</a></li>
+								<li><a href="#">Sub Item 7</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/settings.png" alt="" /></a></li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/twitter.png" alt="" /><span>Twitter<small>@faragly</small></span></a></li>
+					</ul>
+					<div id="topnav">
+						<a href="#"><img alt="" src="images/noavatar.png" class="avatar" /></a>
+						Logged in as <strong>Admin</strong>
+						<span>|</span> <a href="#">Settings</a>
+						<span>|</span> <a href="login.html">Logout</a><br/>
+						<small>You have <a href="#"><strong>1</strong> new message!</a></small>
+					</div>
+				</nav>
+				<!-- horizontal multilevel menu [end] -->
+				
+				<!-- horizontal main tabs menu [begin] -->
+				<nav class="tabs">
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li class="current"><a href="forms.html">Forms</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="grids.html">Grids</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="filemanager.html">File manager</a></li>
+					</ul>
+				</nav>
+				<!-- horizontal main tabs menu [end] -->
+				
+			</header>
+			<div id="container">
+				<!-- main header [begin] -->
+				<header>
+					jQuery Form Validation
+					<!-- search [begin] -->
+					<form method="get" action="" id="search">
+						<input type="text" class="text" size="30" name="q" placeholder="Search" />
+					</form>
+					<!-- search [end] -->
+				</header>
+				<!-- main header [end] -->
+				
+				<div class="colmask rightmenu">
+					<div class="colleft">
+						<div class="col1wrap">
+							<div id="page" class="col1">
+								<!-- CONTENT [begin] -->
+								<!--  breadcrumbs [begin] -->
+								<div class="breadcrumb">
+									<ul>
+										<li><a href="index.html">Dashboard</a></li>
+										<li><a href="forms.html">Forms</a></li>
+										<li>jQuery Form Validation</li>
+									</ul>
+								</div>
+								<!--  breadcrumbs [end] -->
+								
+								<div class="message information">
+									<p>All fields are required.</p>
+								</div>
+								
+								<!--  Form validation plugin [begin] -->
+								<form class="form" id="sampleform" method="post" action="">
+									<fieldset>
+										<legend>JQuery Form Validation</legend>
+										<p>
+											<label class="required" for="firstname">First name:</label>
+											<input type="text" id="firstname" class="text half" value="" name="firstname"/>
+										</p>
+										<p>
+											<label class="required" for="lastname">Last name:</label>
+											<input type="text" id="lastname" class="text half" value="" name="lastname"/>
+										</p>
+										<p>
+											<label class="required" for="username">Username:</label>
+											<input type="text" id="username" class="text half" value="" name="username"/>
+											<small>e.g. ui.templates</small>
+										</p>
+										<p>
+											<label class="required" for="password">Password:</label>
+											<input type="password" id="password" class="text half" value="" name="password"/>
+										</p>
+										<p>
+											<label class="required" for="password_confirm">Confirm password:</label>
+											<input type="password" id="password_confirm" class="text half" value="" name="password_confirm"/>
+										</p>
+										<p>
+											<label class="required" for="email">Email address:</label>
+											<input type="text" id="email" class="text half" value="" name="email"/>
+										</p>
+										<p>
+											<label class="required">Date format:</label>
+											<input type="radio" id="dateformat1" class="" value="dmy" name="dateformat"/>
+											<label class="choice" for="dateformat1">dd/mm/yyyy</label>
+											<input type="radio" id="dateformat2" class="" value="mdy" name="dateformat"/>
+											<label class="choice" for="dateformat2">mm/dd/yyyy</label>
+										</p>
+										<p>
+											<input type="checkbox" id="terms" class="" value="1" name="terms"/>
+											<label class="choice" for="terms">I have read and accept the Terms of Use.</label>
+										</p>
+										<p>
+											<a href="#" class="button" onclick="$('#sampleform').submit();return false;"><span><span>Submit</span></span></a>
+											<a href="#" class="button white" onclick="$('#sampleform')[0].reset();return false;"><span><span>Reset</span></span></a>
+										</p>
+									</fieldset>
+								</form>
+								<div class="areatabs">
+									<ul class="tabs">
+										<li class="current"><a href="#">HTML</a></li>
+										<li><a href="#">JS</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+<pre class="code language-html">
+&lt;form class="form" id="sampleform" method="post" action=""&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;JQuery Form Validation&lt;/legend&gt;
+		&lt;p&gt;
+			&lt;label class="required" for="firstname"&gt;First name:&lt;/label&gt;
+			&lt;input type="text" id="firstname" class="text half" value="" name="firstname"/&gt;&lt;span class="note"&gt;&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;label class="required" for="lastname"&gt;Last name:&lt;/label&gt;
+			&lt;input type="text" id="lastname" class="text half" value="" name="lastname"/&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;label class="required" for="username"&gt;Username:&lt;/label&gt;
+			&lt;input type="text" id="username" class="text half" value="" name="username"/&gt;
+			&lt;small&gt;e.g. ui.templates&lt;/small&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;label class="required" for="password"&gt;Password:&lt;/label&gt;
+			&lt;input type="password" id="password" class="text half" value="" name="password"/&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;label class="required" for="password_confirm"&gt;Confirm password:&lt;/label&gt;
+			&lt;input type="password" id="password_confirm" class="text half" value="" name="password_confirm"/&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;label class="required" for="email"&gt;Email address:&lt;/label&gt;
+			&lt;input type="text" id="email" class="text half" value="" name="email"/&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;label class="required"&gt;Date format:&lt;/label&gt;
+			&lt;input type="radio" id="dateformat1" class="" value="dmy" name="dateformat"/&gt;
+			&lt;label class="choice" for="dateformat1"&gt;dd/mm/yyyy&lt;/label&gt;
+			&lt;input type="radio" id="dateformat2" class="" value="mdy" name="dateformat"/&gt;
+			&lt;label class="choice" for="dateformat2"&gt;mm/dd/yyyy&lt;/label&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;input type="checkbox" id="terms" class="" value="1" name="terms"/&gt;
+			&lt;label class="choice" for="terms"&gt;I have read and accept the Terms of Use.&lt;/label&gt;
+		&lt;/p&gt;
+		&lt;p&gt;
+			&lt;a href="#" class="button" onclick="$('#sampleform').submit();return false;"&gt;&lt;span&gt;&lt;span&gt;Submit&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+			&lt;a href="#" class="button white" onclick="$('#sampleform')[0].reset();return false;"&gt;&lt;span&gt;&lt;span&gt;Reset&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+		&lt;/p&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+										</div>
+										<div class="pane">
+<pre class="code language-js">
+var validator = $("#sampleform").validate({
+	rules: {
+		firstname: "required",
+		lastname: "required",
+		username: {
+			required: true,
+			minlength: 2
+		},
+		password: {
+			required: true,
+			minlength: 5
+		},
+		password_confirm: {
+			required: true,
+			minlength: 5,
+			equalTo: "#password"
+		},
+		email: {
+			required: true,
+			email: true
+		},
+		dateformat: "required",
+		terms: "required"
+	},
+	messages: {
+		firstname: "Enter your firstname",
+		lastname: "Enter your lastname",
+		username: {
+			required: "Enter a username",
+			minlength: jQuery.format("Enter at least {0} characters")
+		},
+		password: {
+			required: "Provide a password",
+			rangelength: jQuery.format("Enter at least {0} characters")
+		},
+		password_confirm: {
+			required: "Repeat your password",
+			minlength: jQuery.format("Enter at least {0} characters"),
+			equalTo: "Enter the same password as above"
+		},
+		email: {
+			required: "Please enter a valid email address",
+			minlength: "Please enter a valid email address"
+		},
+		dateformat: "Choose your preferred dateformat",
+		terms: " "
+	},
+	// the errorPlacement has to take the layout into account
+	errorPlacement: function(error, element) {
+		note = element.next("span.note");
+		if(note.length > 0) note.addClass("error").text(error.text());
+		else element.after('&lt;span class="note error"&gt;'+error.text()+'&lt;/span&gt;');
+		if($.trim(error.text()).length == 0) 
+			element.parent().find("span.note").remove();
+	},
+	// specifying a submitHandler prevents the default submit, good for the demo
+	submitHandler: function() {
+		alert("Data submitted!");
+	},
+	// set new class to error-labels to indicate valid fields
+	success: function(label) {
+		// set &nbsp; as text for IE
+		label.html("&nbsp;").addClass("ok");
+	}
+});
+</pre>
+										</div>
+									</div>
+								</div>
+								<!--  Form validation plugin [end] -->
+
+								
+								<!-- CONTENT [end] -->
+							</div>
+						</div>
+						<div class="col2">
+							<!-- SIDEBAR [begin] -->
+							
+							<!-- right menu [begin] -->
+							<nav class="left">
+								<ul>
+									<li><a href="forms.html">Form examples</a></li>
+									<li class="current"><a href="forms_validation.html">jQuery Form Validation</a></li>
+									<li><a href="forms_wysiwygs.html">Wysiwyg editors</a></li>
+								</ul>
+							</nav>
+							<!-- right menu [end] -->
+							
+							<!-- block with header [begin] -->
+							<div class="block">
+								<h3><span>Header</span></h3>
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block with header [end] -->
+							
+							<!-- block without header [begin] -->
+							<div class="block">
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block without header [end] -->
+							
+							<!-- SIDEBAR [end] -->
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- footer [begin] -->
+		<footer>&copy; Copyright 2010 by <a href="#">Your Company</a></footer>
+		<!-- footer [end] -->
+	</div>
+</div>
+</body>
+</html>

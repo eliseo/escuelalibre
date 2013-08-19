@@ -1,0 +1,19 @@
+/*-------------------+
+|     IE7 styles     |
++-------------------*/
+
+.behavior {behavior: url(js/PIE.php);}
+
+#wrapperbg {-pie-background:rgba(0,0,0,.1);behavior: url(js/PIE.php);}
+/*nav.tabs ul li a:hover {-pie-background:rgba(255,255,255,0.2);border-radius: 5px;behavior: url(js/PIE.htc);}*/
+body.ie7, body.ie8 { overflow-x:hidden; }
+
+#wrapperbg-auth {-pie-background:rgba(0,0,0,.1);border-radius: 5px;behavior: url(js/PIE.php);}
+.message {border-radius:3px;behavior: url(js/PIE.php);}
+#container-auth .form div.line label {position:relative;}
+#container-auth .form div.line label a.float-right {position:absolute;right:0;}
+
+#toolbar a.arrow {top:5px;right:5px;}
+#toolbar { border: 1px solid rgba(0, 0, 0, .5); border-radius: 3px; behavior: url(js/PIE.php);}
+#toolbar .toolbar-wrapper {border: 1px solid rgba(255, 255, 255, .5);-pie-background:linear-gradient(#e4e4e4, #cbcbcb); /*PIE*/behavior: url(js/PIE.php);}
+#toolbar .toolbar-content {-pie-background:rgba(255, 255, 255, .2);border-bottom: 1px solid rgba(255,255,255,.5);border-right: 1px solid rgba(255,255,255,.5);border-top: 1px solid rgba(0,0,0,.2);border-left: 1px solid rgba(0,0,0,.2);behavior: url(js/PIE.php);}

@@ -1,0 +1,44 @@
+html, body {height:100%;}
+body {font:13px normal Arial,Verdana,sans-serif;min-height:100%;width:100%;min-width:600px;font-size:90%;line-height:140%;}
+strong, .strong {font-weight:bold;}
+p {margin: 0 0 1em;}
+a:link, a:active, a:visited {color:#6587eb;text-decoration:underline;}
+a:hover {color:#535353;}
+/* ** ** Header Styles ** ** */
+h1, h2, h3, h4, h5 { font-family: Helvetica, Arial, sans-serif; color:#071526; font-weight:bold; margin-bottom:15px; text-shadow:0px 1px 0px #fff }	
+h1 { font-size: 24px; line-height: 30px; letter-spacing:-1px; }
+h2 { font-size: 22px; line-height: 26px; letter-spacing:-1px;}
+h3 { font-size: 18px; line-height: 22px; letter-spacing:-0.02em;}
+h4 { font-size: 15px; line-height: 18px; font-weight:normal;  }
+h5 { font-size: 12px; line-height: 16px; }	
+p, ul, ol { margin-bottom: 24px }
+ul { list-style:square; margin-left: 24px }
+ol { list-style:decimal; margin-left: 24px }
+article {padding:10px 20px;}
+aside {width:200px;height:100px;background-color:#dccdb9;}
+form label {display:inline-block;margin-bottom:5px;}
+em.box { padding: 0px 3px 0px 3px;border: 1px dotted #aaaaaa;background: #f5f6f7;font-family: "Courier New", Courier, monospace;font-style: normal;white-space: nowrap;}
+header span {color: #722;}
+section {float: left;padding: 35px 0;position: relative;width: 70%;}
+section article {margin: 0 50px 40px;padding: 25px 0 0;position: relative;}
+section header {font-size: 1em;padding: 0;}
+section h1 {font-size: 2.3em;}
+aside {float: right;padding: 70px 0 30px;position: relative;width: 25%;}
+aside h1 {color: #888;font-size: 1.8em;}
+pre {border: 3px solid #DDD !important;padding: 7px 10px;font-size: 12px;white-space: pre;overflow: auto;max-height: 500px;display: block;margin-bottom:15px;}
+q {display:block;font-style:normal;quotes:"" "";background:url("../images/quote.png") no-repeat scroll 0 8px transparent;display:block;font-size:14px;min-height:42px;line-height:24px;padding:0 0 0 20px;color:#666;font-family:Georgia,"Times New Roman",Times,serif;margin:1em 0;}
+q cite {display:block;font-size:12px;color:#999;}
+blockquote, .pqleft, .pqright { color:#666;font-family:Georgia, "Times New Roman", Times, serif; font-size:18px; line-height:18px; font-style:italic }
+.pqleft { float:left; margin:10px 20px 0px 0px; width:50%; display:inline-block }
+.pqright { float:right; margin:10px 0px 0px 20px; width:50%; display:inline-block }
+.dropcap { display:inline-block; font-size:36px; float:left; line-height:36px; margin-right:6px }
+h1.line, h2.line, h3.line, h4.line, h5.line {border-bottom:1px solid #ddd;padding-bottom: 5px;}
+
+small, .small {font-size:11px;}
+.bold {font-weight:bold;}
+
+#wrapperbg > footer {clear: both;color: #aaa;font-size:11px;padding:15px 0;text-align:center;text-shadow:1px 1px 0 #fff;border-top: 1px solid #D8D8D8;background-color:#f3f3f3;}
+footer a:link, footer a:active, footer a:visited {text-decoration:underline;}
+footer a:hover {text-decoration:none;}
+
+span.code {background-color: #EAEFF4;color: #006699;overflow: auto;padding: 2px 6px;font-family: Monaco,"Panic Sans","Lucida Console","Courier New",Courier,monospace,sans-serif;}

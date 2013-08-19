@@ -1,0 +1,26 @@
+.uiPicEdit{
+	background-color:#F2F2F2;
+}
+
+.profile-picture{
+	width:180px;
+	padding:30px;
+}
+
+.profile-picture img{
+	display:block;
+	margin:auto;
+	width:180px;
+}
+
+.profile_pic_new{
+	padding:10px;
+	text-align:center;
+	width:350px;
+	display:block;
+}
+
+.profile_pic_new
+.profile_pic_upload{
+	padding:10px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: Login</title>
+	
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom-auth.js"></script>
+	<script type="text/javascript" src="js/toolbar-auth.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery.rloader-1.1.min,yaadmin,custom-auth,toolbar-auth"></script>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,general,styles,buttons,forms,prettyPhoto" media="screen"/>
+	-->
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body id="auth-page">
+<div id="page-body-auth">
+	<div id="wrapperbg-auth">
+		<div id="container-auth">
+			<header>Login</header>
+			<div class="content">
+				<div class="message information closeable">
+					<p>Type anything to log in</p>
+				</div>
+				<!--  Login form [begin] -->
+				<form class="form" id="loginform" method="post" action="index.html">
+					<div class="line">
+						<label>Username:</label>
+						<input type="text" class="text full96" value="" />
+					</div>
+					<div class="line">
+						<label>Password: <a href="#" class="small bold float-right">Forgot password?</a></label>
+						<input type="password" class="text full96" value="" />
+					</div>
+					<div class="line">
+						<input type="checkbox" id="remember" class="" value="1" name="remember"/>
+						<label class="choice" for="remember">Remember me</label>
+						<a href="#" class="button green float-right" onclick="$('#loginform').submit();return false;"><span><span>Log in</span></span></a>
+						<div class="clearfix"></div>
+					</div>
+				</form>
+				<!--  Login form [end] -->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

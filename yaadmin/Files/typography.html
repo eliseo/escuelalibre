@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: Typography</title>
+	
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ga.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"></script>
+	-->
+	
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid-12.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/tables.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/visualize.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body>
+<div id="page-body">
+	<div id="wrapperbg">
+		<div id="wrapper">
+			<header>
+				<!-- horizontal multilevel menu [begin] -->
+				<nav id="menu">
+					<ul class="menu">
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/home.png" alt="" /></a>
+							<ul>
+								<li><a href="#">Sub Item 2</a></li>
+								<li><a href="#">Sub Item 3</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/user-1.png" alt="" /></a>
+							<ul>
+								<li class="parent"><a href="#">Sub Item 1</a>
+									<ul>
+										<li><a href="#">Sub Item 1.1</a></li>
+										<li><a href="#">Sub Item 1.2</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="#">Sub Item 2</a>
+								   <ul>
+										<li><a href="#">Sub Item 2.1</a></li>
+										<li><a href="#">Sub Item 2.2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sub Item 3</a></li>
+								<li><a href="#">Sub Item 4</a></li>
+								<li><a href="#">Sub Item 5</a></li>
+								<li><a href="#">Sub Item 6</a></li>
+								<li><a href="#">Sub Item 7</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/settings.png" alt="" /></a></li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/twitter.png" alt="" /><span>Twitter<small>@faragly</small></span></a></li>
+					</ul>
+					<div id="topnav">
+						<a href="#"><img alt="" src="images/noavatar.png" class="avatar" /></a>
+						Logged in as <strong>Admin</strong>
+						<span>|</span> <a href="#">Settings</a>
+						<span>|</span> <a href="login.html">Logout</a><br/>
+						<small>You have <a href="#"><strong>1</strong> new message!</a></small>
+					</div>
+				</nav>
+				<!-- horizontal multilevel menu [end] -->
+				
+				<!-- horizontal main tabs menu [begin] -->
+				<nav class="tabs">
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+						<li class="current"><a href="typography.html">Typography</a></li>
+						<li><a href="grids.html">Grids</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="filemanager.html">File manager</a></li>
+					</ul>
+				</nav>
+				<!-- horizontal main tabs menu [end] -->
+				
+			</header>
+			<div id="container">
+				<!-- main header [begin] -->
+				<header>
+					Typography
+					<!-- search [begin] -->
+					<form method="get" action="" id="search">
+						<input type="text" class="text" size="30" name="q" placeholder="Search" />
+					</form>
+					<!-- search [end] -->
+				</header>
+				<!-- main header [end] -->
+				
+				<div class="colmask rightmenu">
+					<div class="colleft">
+						<div class="col1wrap">
+							<div id="page" class="col1">
+								<!-- CONTENT [begin] -->
+								<div class="breadcrumb">
+									<ul>
+										<li><a href="index.html">Dashboard</a></li>
+										<li><a href="typography.html">Typography</a></li>
+										<li>With the code</li>
+									</ul>
+								</div>
+								<!-- notifications [begin] -->
+								<h3 class="line marginTop-10">Notifications</h3>
+								<div class="message success">
+									<p>Success message. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								</div>
+								<div class="message warning">
+									<p>Attention message. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								</div>
+								<div class="message error">
+									<p>Error message. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								</div>
+								<div class="message information">
+									<p>Information message. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								</div>
+								<div class="message tip">
+									<p>Tooltip message. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								</div>
+								<p>Types: <em class="box">success</em>, <em class="box">warning</em>, <em class="box">error</em>, <em class="box">information</em>, <em class="box">tip</em></p>
+<pre class="code language-html">&lt;div class="message %type%"&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/div&gt;</pre>
+								<p>In case you want to make boxes closeable simply add the "closeable" class:</p>
+								<div class="message closeable tip">
+									<p>This box can be closed!</p>
+								</div>
+<pre class="code language-html">&lt;div class="message closeable %type%"&gt;
+	&lt;p&gt;This box can be closed!&lt;/p&gt;
+&lt;/div&gt;</pre>
+								<!-- notifications [end] -->
+								
+								<!-- headings [begin] -->
+								<div class="span-full container_12 marginBottom-10">
+									<div class="span-6 alpha">
+										<h1>H1 Level Heading</h1>
+										<h2>H2 Level Heading</h2>
+										<h3>H3 Level Heading</h3>
+										<h4>H4 Level Heading</h4>
+										<h5>H5 Level Heading</h5>
+									</div>
+									<div class="span-6 omega">
+										<h1 class="line">H1 Level Heading</h1>
+										<h2 class="line">H2 Level Heading</h2>
+										<h3 class="line">H3 Level Heading</h3>
+										<h4 class="line">H4 Level Heading</h4>
+										<h5 class="line">H5 Level Heading</h5>
+										<pre class="code language-html">&lt;h1 class="line"&gt;...&lt;/h1&gt;</pre>
+									</div>
+								</div>
+								<!-- headings [end] -->
+								
+								<!-- tabs [begin] -->
+								<h3 class="line">Tabs, toggle & basic tags</h3>
+								<div class="areatabs">
+									<ul class="tabs">
+										<li class="current"><a href="#">Tabbed</a></li>
+										<li><a href="#">Content</a></li>
+										<li><a href="#">Here</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus. Etiam varius dui eget lorem elementum eget mattis sapien interdum. In hac habitasse platea dictumst. Morbi sed nisi est, vitae convallis nulla. Nunc vestibulum ipsum nec libero sodales dignissim. Nulla ac libero neque, sit amet convallis leo. 
+										</div>
+										<div class="pane">
+											Aenean sodales, augue venenatis posuere fermentum, tellus velit vestibulum libero, ut elementum ipsum erat sed tellus. Donec vel sapien porta sapien eleifend tincidunt at sit amet erat. Praesent in dolor eu orci malesuada viverra vitae vel purus. Sed sit amet dui nisl.
+										</div>
+										<div class="pane">
+											Proin quam neque, fringilla vel porta eu, ultricies id quam. Praesent magna leo, interdum vitae auctor eu, commodo imperdiet ligula. Donec elit nunc, pellentesque vel pulvinar non, semper id nibh. Praesent sapien felis, gravida a lacinia sed, sagittis vitae erat. Proin vel massa ante, quis facilisis nunc. Curabitur dignissim fringilla ante vitae tincidunt. 
+										</div>
+									</div>
+								</div>
+<pre class="code language-html">
+&lt;div class="areatabs"&gt;
+	&lt;ul class="tabs"&gt;
+		&lt;li class="current"&gt;&lt;a href="#"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="panes"&gt;
+		&lt;div class="pane visible"&gt;
+			Tab content 1
+		&lt;/div&gt;
+		&lt;div class="pane"&gt;
+			Tab content 2
+		&lt;/div&gt;
+		&lt;div class="pane"&gt;
+			Tab content 3 
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+								<!-- toggle [begin] -->
+								<h5 class="toggle">Toggle Content</h5>
+								<div class="toggle_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus. Etiam varius dui eget lorem elementum eget mattis sapien interdum. In hac habitasse platea dictumst. Morbi sed nisi est, vitae convallis nulla.</div>
+<pre class="code language-html">
+&lt;h5 class="toggle">Toggle Content&lt;/h5&gt;
+&lt;div class="toggle_content"&gt;
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus. Etiam varius dui eget lorem elementum eget mattis sapien interdum. In hac habitasse platea dictumst. Morbi sed nisi est, vitae convallis nulla.
+&lt;/div&gt;
+</pre>
+								<!-- toggle [end] -->
+								
+								<!-- basic tags [begin] -->
+								<p><strong>Lorem ipsum dolor sit amet</strong> <span class="code">&lt;strong&gt;</span></p>
+								<p><em>Lorem ipsum dolor sit amet</em> <span class="code">&lt;em&gt;</span></p>
+								<p><abbr title="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</abbr> <span class="code">&lt;abbr&gt;</span></p>
+								<p><code>Lorem ipsum dolor sit amet</code> <span class="code">&lt;code&gt;</span> </p>
+								<p><small>Lorem ipsum dolor sit amet</small> <span class="code">&lt;small&gt;</span> </p>
+								<p><mark>Lorem ipsum dolor sit amet</mark> <span class="code">&lt;mark&gt;</span> </p>
+								<p><del>Lorem ipsum dolor sit amet</del> <span class="code">&lt;del&gt;</span> </p>
+								<p><a href="#">Lorem ipsum dolor sit amet</a> <span class="code">&lt;a&gt;</span> </p>
+								<p>
+									<q>
+										A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away.
+										<cite>Antoine De Saint-Exupery</cite>
+									</q>
+									<span class="code">&lt;q&gt;&lt;cite&gt;&lt;/cite&gt;&lt;/q&gt;</span>
+								</p>
+								<div class="clearfix"></div>
+								<!-- basic tags [end] -->
+								
+								<!-- buttons [begin] -->
+								<h3 class="line marginTop-10">Buttons</h3>
+								<p>
+									<a class="button" href="#"><span><span>Blue</span></span></a>
+									<a class="button gray" href="#"><span><span>Gray</span></span></a>
+									<a class="button white" href="#"><span><span>White</span></span></a><br />
+									<a class="button red" href="#"><span><span>Red</span></span></a>
+									<a class="button green" href="#"><span><span>Green</span></span></a>
+									<a class="button lightblue" href="#"><span><span>Light Blue</span></span></a><br />
+								</p>
+								<p>Colors: <em class="box">default</em>, <em class="box">gray</em>, <em class="box">white</em>, <em class="box">red</em>, <em class="box">green</em>, <em class="box">lightblue</em></p>
+								<pre class="code language-html">&lt;a class="button %color%" href="#"&gt;&lt;span&gt;&lt;span&gt;Button&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;</pre>
+								<div class="clearfix"></div>
+								<!-- buttons [end] -->
+								
+								<!-- blockquote [begin] -->
+								<h3 class="line marginTop-10">Blockquote</h3>
+								<blockquote class="marginBottom-15">This is a blockquote. Lorem ipsum is simply a dummy text</blockquote>
+<pre class="code language-html">
+&lt;blockquote&gt;This is a blockquote. Lorem ipsum is simply a dummy text&lt;/blockquote&gt;
+</pre>
+								<div class="clearfix"></div>
+								<!-- blockquote [end] -->
+								
+								<!-- dropcap [begin] -->
+								<h3 class="line marginTop-10">Dropcap</h3>
+								<p><span class="dropcap">D</span>ropcap example ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur</p>
+<pre class="code language-html">
+&lt;p&gt;&lt;span class="dropcap"&gt;D&lt;/span&gt;ropcap example ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur&lt;/p&gt;
+</pre>
+								<div class="clearfix"></div>
+								<!-- dropcap [end] -->
+								
+								<!-- pullquotes [begin] -->
+								<h3 class="line marginTop-10">Pullquotes</h3>
+								<div class="span-full container_12 marginBottom-10">
+									<div class="span-6 alpha">
+										Dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur  <span class="pqleft">Pullquote left side</span> Morbi sed nisi est, vitae convallis nulla. Nunc vestibulum ipsum nec libero sodales dignissim. Nulla ac libero neque, sit amet.
+									</div>
+									<div class="span-6 omega">
+										Dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur  <span class="pqright">Pullquote right</span> Morbi sed nisi est, vitae convallis nulla. Nunc vestibulum ipsum nec libero sodales dignissim. Nulla ac libero neque, sit amet.
+									</div>
+								</div>
+<pre class="code language-html">
+&lt;div class="span-full container_12"&gt;
+	&lt;div class="span-6 alpha"&gt;
+		Dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur &lt;span class="pqleft"&gt;Pullquote left side&lt;/span&gt; Morbi sed nisi est, vitae convallis nulla. Nunc vestibulum ipsum nec libero sodales dignissim. Nulla ac libero neque, sit amet.
+	&lt;/div&gt;
+	&lt;div class="span-6 omega"&gt;
+		Dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur &lt;span class="pqright"&gt;Pullquote right&lt;/span&gt; Morbi sed nisi est, vitae convallis nulla. Nunc vestibulum ipsum nec libero sodales dignissim. Nulla ac libero neque, sit amet.
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+								<div class="clearfix"></div>
+								<!-- pullquotes [end] -->
+								
+								<!-- default lists [begin] -->
+								<h3 class="line marginTop-10">Default lists</h3>
+								<div class="span-full container_12">
+									<div class="span-6 alpha">
+										<ul>
+											<li>Unordered list item</li>
+											<li>Unordered list item</li>
+											<li>Unordered list item</li>
+											<li>Unordered list item</li>
+										</ul>
+<pre class="code language-html">
+&lt;ul&gt;
+	&lt;li>Unordered list item&lt;/li&gt;
+	&lt;li>Unordered list item&lt;/li&gt;
+	&lt;li>Unordered list item&lt;/li&gt;
+	&lt;li>Unordered list item&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+									</div>
+									<div class="span-6 omega">
+										<ol>
+											<li>Ordered list item</li>
+											<li>Ordered list item</li>
+											<li>Ordered list item</li>
+											<li>Ordered list item</li>
+										</ol>
+<pre class="code language-html">
+&lt;ol&gt;
+	&lt;li>Ordered list item&lt;/li&gt;
+	&lt;li>Ordered list item&lt;/li&gt;
+	&lt;li>Ordered list item&lt;/li&gt;
+	&lt;li>Ordered list item&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+									</div>
+								</div>
+								<!-- default lists [end] -->
+								
+								<!-- styled lists [begin] -->
+								<h3 class="line marginTop-10">Styled unordered lists</h3>
+								<div class="span-full container_12 marginBottom-10">
+									<div class="span-4 alpha">
+										<ul class="list list0">
+											<li><em class="box">class="list list0"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4">
+										<ul class="list list1">
+											<li><em class="box">class="list list1"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4 omega">
+										<ul class="list list2">
+											<li><em class="box">class="list list2"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4 alpha">
+										<ul class="list list3">
+											<li><em class="box">class="list list3"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4">
+										<ul class="list list4">
+											<li><em class="box">class="list list4"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4 omega">
+										<ul class="list list5">
+											<li><em class="box">class="list list5"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4 alpha">
+										<ul class="list list6">
+											<li><em class="box">class="list list6"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4">
+										<ul class="list list7">
+											<li><em class="box">class="list list7"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+									<div class="span-4 omega">
+										<ul class="list list8">
+											<li><em class="box">class="list list8"</em></li>
+											<li>Dummy list item</li>
+											<li>Dummy list item</li>
+										</ul>
+									</div>
+								</div>
+								<!-- styled lists [end] -->
+								
+								<!-- frames [begin] -->
+								<div class="span-full container_12 marginBottom-10">
+									<div class="span-6 alpha">
+										<h3>Frame style 1</h3>
+										<p><a rel="prettyPhoto[demo]" href="http://farm3.static.flickr.com/2419/2291592653_3f6e9e95b4_z.jpg?zz=1"><img class="border-1 alignleft" title="image" src="img/2291592653_3f6e9e95b4_t.jpg"></a>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+									</div>
+									<div class="span-6 omega">
+										<h3>Frame style 2</h3>
+										<p><a rel="prettyPhoto[demo]" href="http://farm2.static.flickr.com/1173/1409528648_e1d1ff9557_z.jpg?zz=1"><img class="border-2 alignright" title="image" src="img/1409528648_e1d1ff9557_t.jpg"></a>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+									</div>
+								</div>
+<pre class="code language-html">
+&lt;a rel="prettyPhoto[demo]" href="http://farm3.static.flickr.com/2419/2291592653_3f6e9e95b4_z.jpg?zz=1"&gt;&lt;img class="border-1 alignleft" title="image" src="img/2291592653_3f6e9e95b4_t.jpg"&gt;&lt;/a&gt;
+</pre>
+<pre class="code language-html">
+&lt;a rel="prettyPhoto[demo]" href="http://farm2.static.flickr.com/1173/1409528648_e1d1ff9557_z.jpg?zz=1"&gt;&lt;img class="border-2 alignright" title="image" src="img/1409528648_e1d1ff9557_t.jpg"&gt;&lt;/a&gt;
+</pre>
+								<div class="clearfix"></div>
+								<!-- frames [end] -->
+
+								<!-- boxes [begin] -->
+								<h3 class="line marginTop-10">Boxes</h3>
+								<div class="span-full container_12">
+									<div class="span-6 alpha">
+										<div class="block">
+											<h3><span>Header</span></h3>
+											<div class="bcontent">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											</div>
+										</div>
+									</div>
+									<div class="span-6 omega">
+										<div class="block">
+											<div class="bcontent">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											</div>
+										</div>
+									</div>
+									<div class="span-6 alpha">
+<pre class="code language-html">
+&lt;div class="block"&gt;
+	&lt;h3&gt;&lt;span&gt;Header&lt;/span&gt;&lt;/h3&gt;
+	&lt;div class="bcontent"&gt;
+		Content text here
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+									</div>
+									<div class="span-6 omega">
+<pre class="code language-html">
+&lt;div class="block"&gt;
+	&lt;div class="bcontent"&gt;
+		Content text here
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+									</div>
+									<div class="span-6 alpha">
+										<div class="block collapsible">
+											<h3><span>Header</span></h3>
+											<div class="bcontent">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											</div>
+										</div>
+									</div>
+									<div class="span-6 omega">
+										<div class="block collapsible closed">
+											<h3><span>Header</span></h3>
+											<div class="bcontent">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											</div>
+										</div>
+									</div>
+									<div class="span-6 alpha">
+<pre class="code language-html">
+&lt;div class="block collapsible"&gt;
+	&lt;h3&gt;&lt;span&gt;Header&lt;/span&gt;&lt;/h3&gt;
+	&lt;div class="bcontent"&gt;
+		Content text here
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+									</div>
+									<div class="span-6 omega">
+<pre class="code language-html">
+&lt;div class="block collapsible closed"&gt;
+	&lt;h3&gt;&lt;span&gt;Header&lt;/span&gt;&lt;/h3&gt;
+	&lt;div class="bcontent"&gt;
+		Content text here
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+									</div>
+								</div>
+								<!-- boxes [end] -->
+								
+								<!-- CONTENT [end] -->
+							</div>
+						</div>
+						<div class="col2">
+							<!-- SIDEBAR [begin] -->
+							
+							<!-- right menu [begin] -->
+							<nav class="left">
+								<ul>
+									<li class="current"><a href="typography.html">Typography</a></li>
+								</ul>
+							</nav>
+							<!-- right menu [end] -->
+							
+							<!-- block with header [begin] -->
+							<div class="block">
+								<h3><span>Header</span></h3>
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block with header [end] -->
+							
+							<!-- block without header [begin] -->
+							<div class="block">
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block without header [end] -->
+							
+							<!-- SIDEBAR [end] -->
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- footer [begin] -->
+		<footer>&copy; Copyright 2010 by <a href="#">Your Company</a></footer>
+		<!-- footer [end] -->
+	</div>
+</div>
+</body>
+</html>

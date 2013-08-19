@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: Main</title>
+	
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ga.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"></script>
+	-->
+	
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid-12.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/tables.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/visualize.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body>
+<div id="page-body">
+	<div id="wrapperbg">
+		<div id="wrapper">
+			<header>
+				<!-- horizontal multilevel menu [begin] -->
+				<nav id="menu">
+					<ul class="menu">
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/home.png" alt="" /></a>
+							<ul>
+								<li><a href="#">Sub Item 2</a></li>
+								<li><a href="#">Sub Item 3</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/user-1.png" alt="" /></a>
+							<ul>
+								<li class="parent"><a href="#">Sub Item 1</a>
+									<ul>
+										<li><a href="#">Sub Item 1.1</a></li>
+										<li><a href="#">Sub Item 1.2</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="#">Sub Item 2</a>
+								   <ul>
+										<li><a href="#">Sub Item 2.1</a></li>
+										<li><a href="#">Sub Item 2.2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sub Item 3</a></li>
+								<li><a href="#">Sub Item 4</a></li>
+								<li><a href="#">Sub Item 5</a></li>
+								<li><a href="#">Sub Item 6</a></li>
+								<li><a href="#">Sub Item 7</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/settings.png" alt="" /></a></li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/twitter.png" alt="" /><span>Twitter<small>@faragly</small></span></a></li>
+					</ul>
+					<div id="topnav">
+						<a href="#"><img alt="" src="images/noavatar.png" class="avatar" /></a>
+						Logged in as <strong>Admin</strong>
+						<span>|</span> <a href="#">Settings</a>
+						<span>|</span> <a href="login.html">Logout</a><br/>
+						<small>You have <a href="#"><strong>1</strong> new message!</a></small>
+					</div>
+				</nav>
+				<!-- horizontal multilevel menu [end] -->
+				
+				<!-- horizontal main tabs menu [begin] -->
+				<nav class="tabs">
+					<ul>
+						<li class="current"><a href="index.html">Dashboard</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="grids.html">Grids</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="filemanager.html">File manager</a></li>
+					</ul>
+				</nav>
+				<!-- horizontal main tabs menu [end] -->
+				
+			</header>
+			<div id="container">
+				<!-- main header [begin] -->
+				<header>
+					Dashboard
+					<!-- search [begin] -->
+					<form method="get" action="" id="search">
+						<input type="text" class="text" size="30" name="q" placeholder="Search" />
+					</form>
+					<!-- search [end] -->
+				</header>
+				<!-- main header [end] -->
+				
+				<div class="colmask rightmenu">
+					<div class="colleft">
+						<div class="col1wrap">
+							<div id="page" class="col1">
+								<!-- CONTENT [begin] -->
+								<!--  breadcrumbs [begin] -->
+								<div class="breadcrumb">
+									<ul>
+										<li><a href="index.html">Dashboard</a></li>
+										<li>Main</li>
+									</ul>
+								</div>
+								<!--  breadcrumbs [end] -->
+								<div class="message closeable information">
+									<p>Another form of presentation of statistics Google Analytics can be found at the <a href="stats.html">link</a></p>
+								</div>
+								<div id="visualize"></div>
+								<div class="areatabs marginBottom-0">
+									<ul class="tabs">
+										<li class="current"><a href="#">Features</a></li>
+										<li><a href="#">Code page</a></li>
+										<li><a href="#">Table of basic classes</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+											<!-- features [begin] -->
+											<ul class="list list0">
+												<li>HTML5 & CSS3 markup</li>
+												<li>Unlimited level dropdown menu</li>
+												<li>11 different backend pages</li>
+												<li>Optimized page load time by using CSS and JS Compressor</li>
+												<li>9 pre-installed styles + 1 unique with a custom color-scheme</li>
+												<li>Integrated <a href="stats.html">Google Analytics stats</a> with 2 types of data</li>
+												<li><a href="stats_visualize.html">jQuery Visualize charts</a> and <a href="stats_flot.html">jQuery Flot graphs</a></li>
+												<li>2 Wysiwyg editors (<a href="forms_wysiwygs.html">markItUp, jWysiwyg</a>)</li>
+												<li><a href="forms_validation.html">jQuery Form Validation</a></li>
+												<li>Fluid Grid system (<a href="grids.html">12</a>-16-24 columns)</li>
+												<li>All typographical <a href="typography.html">elements</a> (headers, messages, buttons, tabs and etc.)</li>
+												<li>The newest jQuery 1.4.4, modernizr 1.6</li>
+											</ul>
+											<!-- features [end] -->
+										</div>
+										<div class="pane">
+											<!-- blank page html code [begin] -->
+											<p class="marginBottom-10">Here is the blank page for admin panel:</p>
+<pre class="code language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;YaAdmin :: Title&lt;/title&gt;
+	&lt;script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.6.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"&gt;&lt;/script&gt;
+	&lt;!--[if IE]&gt;&lt;script type="text/javascript" src="js/excanvas.js"&gt;&lt;/script&gt;&lt;![endif]--&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/&gt;
+	&lt;!--[if lt IE 9]&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /&gt;
+	&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="page-body"&gt;
+	&lt;div id="wrapperbg"&gt;
+		&lt;div id="wrapper"&gt;
+			&lt;header&gt;
+				&lt;nav id="menu"&gt;
+					&lt;!-- horizontal multilevel menu --&gt;
+					&lt;!-- user panel --&gt;
+				&lt;/nav&gt;
+				
+				&lt;!-- horizontal main tabs menu [begin] --&gt;
+				&lt;nav class="tabs"&gt;
+					&lt;ul&gt;
+						&lt;li class="current"&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/nav&gt;
+				&lt;!-- horizontal main tabs menu [end] --&gt;
+				
+			&lt;/header&gt;
+			&lt;div id="container"&gt;
+				&lt;!-- main header [begin] --&gt;
+				&lt;header&gt;
+					Title
+					&lt;!-- search form --&gt;
+				&lt;/header&gt;
+				&lt;!-- main header [end] --&gt;
+				
+				&lt;div class="colmask rightmenu"&gt;
+					&lt;div class="colleft"&gt;
+						&lt;div class="col1wrap"&gt;
+							&lt;div id="page" class="col1"&gt;
+								&lt;!-- CONTENT [begin] --&gt;
+								
+								&lt;!-- CONTENT [end] --&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class="col2"&gt;
+							&lt;!-- SIDEBAR [begin] --&gt;
+							
+							&lt;!-- SIDEBAR [end] --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- footer [begin] --&gt;
+		&lt;footer&gt;&copy; Copyright 2010 by &lt;a href="#"&gt;Your Company&lt;/a&gt;&lt;/footer&gt;
+		&lt;!-- footer [end] --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+											<p class="marginTop-20 marginBottom-10">If you want to use the entire width of the page, then use the code from the right-hand column.</p>
+											<div class="span-full container_12 marginBottom-10">
+												<div class="span-7 alpha">
+<pre class="code language-html">
+&lt;div class="colmask rightmenu"&gt;
+	&lt;div class="colleft"&gt;
+		&lt;div class="col1wrap"&gt;
+			&lt;div id="page" class="col1"&gt;
+				&lt;!-- CONTENT [begin] --&gt;
+
+				&lt;!-- CONTENT [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="col2"&gt;
+			&lt;!-- SIDEBAR [begin] --&gt;
+				
+			&lt;!-- SIDEBAR [end] --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+												</div>
+												<div class="span-5 omega">
+<pre class="code language-html">
+&lt;div id="page"&gt;
+	&lt;div class="span-full container_12"&gt;
+		&lt;!-- GRIDS HERE --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+												</div>
+											</div>
+											<!-- blank page html code [end] -->
+										</div>
+										<div class="pane">
+											<!-- Table of basic classes [begin] -->
+											<table class="table">
+												<tbody>
+													<tr>
+														<th class="flat" scope="col">Class</th>
+														<th scope="col">Description</th>
+														<th scope="col">Usable tags</th>
+													</tr>
+													<tr>
+														<th>clearfix</th>
+														<td>Use for clearing of float left/right elements inside of element with this class</td>
+														<td>any block tag</td>
+													</tr>
+													<tr>
+														<th>margin-0</th>
+														<td>It will set margin of element to 0px.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>padding-0</th>
+														<td>It will set padding of element to 0px.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>hidden</th>
+														<td>It will set display: none style. It is used in sliding boxes for example.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>visible</th>
+														<td>It will set display: block style. It can be used for displaying of hidden elements.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>float-left</th>
+														<td>It will set <em class="box">float: left</em> to an element.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>float-right</th>
+														<td>It will set <em class="box">float: right</em> to an element.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>textleft</th>
+														<td>it will set <em class="box">text-align: right</em>.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>textcenter</th>
+														<td>It will set <em class="box">text-align: center</em>.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>textright</th>
+														<td>It will set <em class="box">text-align: right</em>.</td>
+														<td>any tag</td>
+													</tr>
+													<tr>
+														<th>alignleft</th>
+														<td>it will set <em class="box">float: right</em> and <em class="box">margin: 0 0 20px 20px</em>.</td>
+														<td>img</td>
+													</tr>
+													<tr>
+														<th>alignright</th>
+														<td>It will set <em class="box">float: right</em> and <em class="box">margin: 0 20px 20px 0</em>.</td>
+														<td>img</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- Table of basic classes [end] -->
+										</div>
+									</div>
+								</div>
+								<!-- block with header [begin] -->
+								<div class="block">
+									<h3><span>Frame</span></h3>
+									<div class="bcontent">
+										<a rel="prettyPhoto" href="http://farm3.static.flickr.com/2419/2291592653_3f6e9e95b4_z.jpg?zz=1"><img class="border-1 alignleft" title="image" src="img/2291592653_3f6e9e95b4_t.jpg"></a>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+									</div>
+								</div>
+								<!-- block with header [end] -->
+
+								<!-- CONTENT [end] -->
+							</div>
+						</div>
+						<div class="col2">
+							<!-- SIDEBAR [begin] -->
+							
+							<!-- right menu [begin] -->
+							<nav class="left">
+								<ul>
+									<li class="current"><a href="index.html">Dashboard</a></li>
+								</ul>
+							</nav>
+							<!-- right menu [end] -->
+							
+							<!-- block with header [begin] -->
+							<div class="block">
+								<h3><span>Header</span></h3>
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block with header [end] -->
+							
+							<!-- block without header [begin] -->
+							<div class="block">
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block without header [end] -->
+							
+							<!-- SIDEBAR [end] -->
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- footer [begin] -->
+		<footer>&copy; Copyright 2010 by <a href="#">Your Company</a></footer>
+		<!-- footer [end] -->
+	</div>
+</div>
+</body>
+</html>

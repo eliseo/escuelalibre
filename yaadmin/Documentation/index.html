@@ -1,0 +1,453 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>YaAdmin Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/syntax-highlighter/js/jquery.syntaxhighlighter.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$.SyntaxHighlighter.init({
+			'prettifyBaseUrl': 'js/syntax-highlighter/prettify',
+			'baseUrl': 'js/syntax-highlighter'
+		});
+	});
+	</script>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;YaAdmin&rdquo; Documentation by &ldquo;Faragly Halik&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;YaAdmin&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 19/12/2010<br>
+					By: Faragly Halik<br>
+					Email: <a href="mailto:faragly@gmail.com">faragly@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/lifter">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			<li><a href="#">PHP Code Explanation</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<pre class="code language-js">
+// TEMPLATE FILE STRUCTURE
++css
+|--+compressed						// folder for compressed CSS files
+|--+fluidgrid						// folder for fluid grid system CSS files
+|--|--fluidgrid.css					// fluid grid system main file
+|--|--fluidgrid-12.css				// fluid grid 12 column
+|--|--fluidgrid-26.css				// fluid grid 16 column
+|--|--fluidgrid-24.css				// fluid grid 24 column
+|--+smoothness						// jQueryUI-theme folder
+|--|--images						// jQueryUI-theme images folder
+|--|--jquery-ui-1.8.7.custom.css	// jQueryUI-theme css file
+|--buttons.css						// styles for buttons
+|--colorpicker.css					// ColorPicker plugin css file
+|--forms.css						// styles for form elements
+|--general.css						// general css
+|--ie.css							// ie hacks css file
+|--menu.css							// all menu styles here
+|--prettyPhoto.css					// prettyPhoro plugin css file
+|--reset.css						// reset default settings for different browsers
+|--styles.css						// main file styles
+|--tables.css						// styles for Tables
+|--visualize.css					// jQuery Visualize plugin CSS file
+|--css.php							// CSS Compressor php file
++images
++js
+|--+compressed						// folder for compressed JS files
+|--colorpicker.js					// jQuery ColorPicker plugin
+|--custom.js						// main js init file
+|--custom-auth.js					// main js on a login page
+|--excanvas.js						// canvas in ie7-8
+|--jquery.flot.min.js				// jQuery flot plugin
+|--jquery.ga.js						// GA stats plugin
+|--jquery.prettyPhoto.js			// jQuery prettyPhoto plugin
+|--jquery.rloader-1.1.min.js		// jQuery resource loader plugin
+|--jquery.validate.pack.js			// jQuery Validation plugin
+|--jquery.visualize.js				// jQuery Visualize plugin
+|--jquery.wysiwyg.js				// jQuery wysiwyg plugin
+|--jquery-1.4.4.min.js				// the newest jQuery
+|--jquery-ui-1.8.7.custom.min.js	// jQuery UI (core + slider)
+|--modernizr-1.6.min.js				// Modernizr
+|--toolbar.js						// toolbar (preview styles)
+|--toolbar-auth.js					// toolbar (preview styles) on a login page
+|--yaadmin.js						// made into a separate file of a template function
+|--PIE.htc							// CSS PIE for ie7-8
+|--PIE.php							// CSS PIE (if not work .htc on your server)
+|--js.php							// JS Compressor php file
++modules
++--+compressor						// CSS & JS Compressor files
++--+datatables						// jQuery DataTable
++--+elfinder						// elFinder file manager files
++--+markitup						// jQuery markItUp wysiwyg editor
++--+syntax-highlighter				// Syntax Highlighter for code preview
++php
+|--ajax.php							// Visitors last 30 days
+|--gapi.class.php					// GAPI - Google Analytics PHP Interface
+.htaccess
+filemanager.html					// elFinder file manager demo
+forms.html							// form elements demo
+forms_validation.html				// jQuery Form Validation
+forms_wysiwygs.html					// 2 wysiwyg editors(markItUp, jWysiwyg)
+gallery.html						// 3 types of display image galleries
+grids.html							// fluid grids demo page
+index.html							// main page
+login.html							// login page
+stats.html							// GA stats, demo and code
+stats_flot.html						// jQuery Flot graphs demo
+stats_visualize.html				// jQuery Visualize charts demo
+tables.html							// tables, pagination & DataTable demo
+typography.html						// all typographical elements (headers, messages, buttons, tabs and etc.)
+</pre>
+		<p>This template can be fixed or fluid of your choice, with two columns or one. Sidebar has a fixed width, and the content area is the remaining free area. All of the information within the main content area is nested within a div with an id of "page". The sidebar's (column #2) content is within a div with an class of "col2". The general template structure is the same throughout the template. Here is the general structure.</p>
+
+<pre class="code language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;YaAdmin :: Title&lt;/title&gt;
+	&lt;script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.6.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"&gt;&lt;/script&gt;
+	&lt;!--[if IE]&gt;&lt;script type="text/javascript" src="js/excanvas.js"&gt;&lt;/script&gt;&lt;![endif]--&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/&gt;
+	&lt;!--[if lt IE 9]&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /&gt;
+	&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="page-body"&gt;
+	&lt;div id="wrapperbg"&gt;
+		&lt;div id="wrapper"&gt;
+			&lt;header&gt;
+				&lt;nav id="menu"&gt;
+					&lt;!-- horizontal multilevel menu --&gt;
+					&lt;!-- user panel --&gt;
+				&lt;/nav&gt;
+				
+				&lt;!-- horizontal main tabs menu [begin] --&gt;
+				&lt;nav class="tabs"&gt;
+					&lt;ul&gt;
+						&lt;li class="current"&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/nav&gt;
+				&lt;!-- horizontal main tabs menu [end] --&gt;
+				
+			&lt;/header&gt;
+			&lt;div id="container"&gt;
+				&lt;!-- main header [begin] --&gt;
+				&lt;header&gt;
+					Title
+					&lt;!-- search form --&gt;
+				&lt;/header&gt;
+				&lt;!-- main header [end] --&gt;
+				
+				&lt;div class="colmask rightmenu"&gt;
+					&lt;div class="colleft"&gt;
+						&lt;div class="col1wrap"&gt;
+							&lt;div id="page" class="col1"&gt;
+								&lt;!-- CONTENT [begin] --&gt;
+								
+								&lt;!-- CONTENT [end] --&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class="col2"&gt;
+							&lt;!-- SIDEBAR [begin] --&gt;
+							
+							&lt;!-- SIDEBAR [end] --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- footer [begin] --&gt;
+		&lt;footer&gt;&copy; Copyright 2010 by &lt;a href="#"&gt;Your Company&lt;/a&gt;&lt;/footer&gt;
+		&lt;!-- footer [end] --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>To use the full width of the page without a sidebar, replace:</p>
+
+<pre class="code language-html">
+&lt;div class="colmask rightmenu"&gt;
+	&lt;div class="colleft"&gt;
+		&lt;div class="col1wrap"&gt;
+			&lt;div id="page" class="col1"&gt;
+				&lt;!-- CONTENT [begin] --&gt;
+
+				&lt;!-- CONTENT [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="col2"&gt;
+			&lt;!-- SIDEBAR [begin] --&gt;
+				
+			&lt;!-- SIDEBAR [end] --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>At this:</p>
+<pre class="code language-html">
+&lt;div id="page"&gt;
+	&lt;div class="span-full container_12"&gt;
+		&lt;!-- GRIDS HERE --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p>
+<pre class="code language-css">
+#page a {
+	color: #someColor;
+} 
+</pre>
+<pre>	
+</pre>
+
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+
+		<p>I.E.</p>
+<pre class="code language-css">
+#wrapper #page a {
+	color: #someColor;
+}
+</pre>
+<pre>	
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+<pre class="code language-js">
++css
+|--+compressed						// folder for compressed CSS files
+|--+fluidgrid						// folder for fluid grid system CSS files
+|--|--fluidgrid.css					// fluid grid system main file
+|--|--fluidgrid-12.css				// fluid grid 12 column
+|--|--fluidgrid-26.css				// fluid grid 16 column
+|--|--fluidgrid-24.css				// fluid grid 24 column
+|--+smoothness						// jQueryUI-theme folder
+|--|--images						// jQueryUI-theme images folder
+|--|--jquery-ui-1.8.7.custom.css	// jQueryUI-theme css file
+|--buttons.css						// styles for buttons
+|--colorpicker.css					// ColorPicker plugin css file
+|--forms.css						// styles for form elements
+|--general.css						// general css
+|--ie.css							// ie hacks css file
+|--menu.css							// all menu styles here
+|--prettyPhoto.css					// prettyPhoro plugin css file
+|--reset.css						// reset default settings for different browsers
+|--styles.css						// main file styles
+|--tables.css						// styles for Tables
+|--visualize.css					// jQuery Visualize plugin CSS file
+|--css.php							// CSS Compressor php file
+</pre>
+		<p>CSS files is separated into sections using:</p>  
+
+<pre class="code language-css">
+/*--------------+
+|    Layout     |
++--------------*/
+
+/* user panel styles */
+some code
+
+/* Breadcrumbs styles */
+some code
+	
+/* tabs */
+some code
+
+/* footer */
+some code
+	
+etc, etc. 
+</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		<pre class="code language-js">
++js
+|--+compressed						// folder for compressed JS files
+|--colorpicker.js					// jQuery ColorPicker plugin
+|--custom.js						// main js init file
+|--custom-auth.js					// main js on a login page
+|--excanvas.js						// canvas in ie7-8
+|--jquery.flot.min.js				// jQuery flot plugin
+|--jquery.ga.js						// GA stats plugin
+|--jquery.prettyPhoto.js			// jQuery prettyPhoto plugin
+|--jquery.rloader-1.1.min.js		// jQuery resource loader plugin
+|--jquery.validate.pack.js			// jQuery Validation plugin
+|--jquery.visualize.js				// jQuery Visualize plugin
+|--jquery.wysiwyg.js				// jQuery wysiwyg plugin
+|--jquery-1.4.4.min.js				// the newest jQuery
+|--jquery-ui-1.8.7.custom.min.js	// jQuery UI (core + slider)
+|--modernizr-1.6.min.js				// Modernizr
+|--toolbar.js						// toolbar (preview styles)
+|--toolbar-auth.js					// toolbar (preview styles) on a login page
+|--yaadmin.js						// made into a separate file of a template function
+|--PIE.htc							// CSS PIE for ie7-8
+|--PIE.php							// CSS PIE (if not work .htc on your server)
+|--js.php							// JS Compressor php file
++modules
++--+compressor						// CSS & JS Compressor files
++--+datatables						// jQuery DataTable
++--+elfinder						// elFinder file manager files
++--+markitup						// jQuery markItUp wysiwyg editor
++--+syntax-highlighter				// Syntax Highlighter for code preview
+</pre>
+		<ol>
+			<li><strong>jquery-1.4.4.min.js</strong> - <a href="http://jquery.com/">jQuery 1.4.4</a></li>
+			<li><strong>jquery-ui-1.8.7.custom.min.js</strong> - I created custom download jQuery UI ( <a href="http://jqueryui.com/download">link</a> ) includes Slider ( <a href="http://docs.jquery.com/UI/Slider">link</a> ) widget based jQuery UI 1.8.7.</li>
+			<li><strong>modernizr-1.6.min.js</strong> - <a href="http://www.modernizr.com/">Modernizr</a></li>
+			<li><strong>jquery.rloader-1.1.min.js</strong> - <a href="http://code.google.com/p/rloader/">jQuery resource loader plugin</a></li>
+			<li><strong>jquery.flot.min.js</strong> - <a href="http://code.google.com/p/flot/">Javascript plotting for jQuery</a></li>
+			<li><strong>jquery.visualize.js (+excanvas.js)</strong> - <a href="http://www.filamentgroup.com/lab/update_to_jquery_visualize_accessible_charts_with_html5_from_designing_with/">jQuery Visualize plugin</a> + excanvas Javascript emulation helper is used for IE</li>
+			<li><strong>jquery.ga.js</strong> - my GA stats plugin</li>
+			<li><strong>jquery.prettyPhoto.js</strong> - <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a></li>
+			<li><strong>jquery.validate.pack.js</strong> - <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">jQuery Validation plugin</a></li>
+			<li><strong>jquery.wysiwyg.js</strong> - <a href="https://github.com/akzhan/jwysiwyg">jQuery WYSIWYG plugin</a></li>
+			<li>My custom scripts</li>
+		</ol>
+		Source code is commented, I hope everything is understandable, but still you can ask me all the <a href="mailto:faragly@gmail.com">e-mail</a>
+		Most of the function in this site is carried out from open source scripts that are "tried and true". To get support about how to modify these, please refer to their author sites:
+				<ul>
+					<li>"jQuery": <a href="http://jquery.com/">jquery.com</a></li>
+					<li>"jQuery UI (<a href="http://jqueryui.com/demos/slider">Slider</a> widget)": <a href="http://jqueryui.com/">jQuery UI</a></li>
+					<li>"Modernizr": <a href="http://www.modernizr.com/">http://www.modernizr.com/</a></li>
+					<li>"jQuery Flot": <a href="http://code.google.com/p/flot/">http://code.google.com/p/flot/</a></li>
+					<li>"jQuery Visualize": <a href="http://www.filamentgroup.com/lab/update_to_jquery_visualize_accessible_charts_with_html5_from_designing_with/">http://www.filamentgroup.com/lab/update...</a></li>
+					<li>"jQuery resource loader": <a href="http://code.google.com/p/rloader/">http://code.google.com/p/rloader/</a></li>
+					<li>"jQuery WYSIWYG": <a href="http://code.google.com/p/jwysiwyg/">http://code.google.com/p/jwysiwyg/</a></li>
+					<li>"jQuery prettyPhoto": <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/documentation/">http://www.no-margin-for-errors.com...</a></li>
+					<li>"jQuery Validation": <a href="http://docs.jquery.com/Plugins/Validation">http://docs.jquery.com/Plugins/Validation</a></li>
+					<li>"CSS3 PIE": <a href="http://css3pie.com/documentation/">http://css3pie.com/documentation/</a></li>
+					<li>"elFinder": <a href="http://elrte.org/elfinder">http://elrte.org/elfinder</a></li>
+				</ul>
+				For these script, I stuck to conventional implementation, so if you run into problems trying to customize them, the support information should be readily available on those sites. 
+				
+		<hr>
+		
+		<h3 id="credits"><strong>D) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+		<ul>
+			<li><a href="http://code.google.com/p/html5resetcss/">reset.css v1.6.1</a> by Rich Clark ( <a href="http://richclarkdesign.com">http://richclarkdesign.com</a> ) from HTML5 Doctor ( <a href="http://html5doctor.com">http://html5doctor.com</a> )</li>
+			<li><a href="http://www.fluidgrid.net/">Fluid Grid</a> grid system</li>
+			<li><a href="http://omercetin.deviantart.com/art/PixeloPhilia-32PX-Icon-Set-157612627">PixeloPhilia</a> designed by Omer CETIN ( <a href="http://www.omercetin.net/">http://www.omercetin.net/</a>, @omer_cetin on Twitter )</li>
+			<li><a href="http://jquery.com/">jQuery</a> author John Resig ( <a href="http://ejohn.org/blog/">blog</a> )</li>
+			<li>jQuery UI: <a href="http://jqueryui.com/">http://jqueryui.com/</a></li>
+			<li><a href="http://www.modernizr.com/">Modernizr</a> authors <a href="http://farukat.es/">Faruk Ates</a> and <a href="http://paulirish.com/">Paul Irish</a>.</li>
+			<li><a href="http://code.google.com/p/flot/">jQuery Flot</a> by <a href="http://ole-laursen.blogspot.com/">Ole Laursen</a></li>
+			<li><a href="http://www.filamentgroup.com/lab/update_to_jquery_visualize_accessible_charts_with_html5_from_designing_with/">jQuery Visualize</a> by <a href="http://www.filamentgroup.com/">Filament Group</a></li>
+			<li><a href="http://code.google.com/p/rloader/">jQuery resource loader</a> by <a href="http://code.google.com/u/leolems/">leolems</a></li>
+			<li><a href="http://code.google.com/p/jwysiwyg/">jQuery WYSIWYG</a> by <a href="mailto:akzhan.abdulin@gmail.com">Akzhan Abdulin</a></li>
+			<li><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">jQuery prettyPhoto</a></li>
+			<li><a href="http://docs.jquery.com/Plugins/Validation">jQuery Validation</a> by <a href="http://bassistance.de/about/">Jorn Zaefferer</a></li>
+			<li><a href="http://www.eyecon.ro/colorpicker/">Color Picker</a> by <a href="mailto:stefan.petre@gmail.com">Stefan Petre</a></li>
+			<li><a href="http://css3pie.com/">CSS3 PIE</a> by <a href="http://css3pie.com/">Jason Johnston</a></li>
+			<li><a href="http://elrte.org/elfinder">elFinder</a> by <a href="http://www.std42.ru/">Studio 42</a></li>
+			<li><a href="http://www.balupton.com/sandbox/jquery-syntaxhighlighter/demo/">jQuery Syntax Highlighter</a></li>
+			<li><a href="http://www.flickr.com/people/xnuzha/">A.alFoudry</a> for photos of Arabian horses and Porsche Cayenne in typography.html + gallery thumbs in gallery types demostration</li>
+		</ul>
+		
+		<hr>
+		<h3 id="php"><strong>E) PHP Code Explanation</strong> - <a href="#toc">top</a></h3>
+		<pre class="code language-js">
++php
+|--ajax.php							// Visitors last 30 days
+|--gapi.class.php					// GAPI - Google Analytics PHP Interface
+</pre>
+		<p>This theme imports two PHP files and CSS & JS Compressor module.</p>
+		
+		<ol>
+			<li><a href="http://code.google.com/p/gapi-google-analytics-php-interface/">GAPI - Google Analytics PHP Interface</a> (gapi.class.php)</li>
+			<li>Visitors last 30 days (ajax.php)</li>
+		</ol>
+		<ol>
+			<li><p>For statistics of visitors, I used a template <a href="http://code.google.com/p/gapi-google-analytics-php-interface/">GAPI - Google Analytics PHP Interface</a>.</p></li>
+			<li>
+				<p>For the use you need to make to the file <strong>/php/ajax.php</strong> data for authentication and Google report ID for the selected account.</p>
+<pre class="code language-php">
+&lt;?
+
+$email = "yourmail@gmail.com";
+$password = "PASSWORD";
+$report_id = 34583510; // $report_id is the Google report ID for the selected account
+
+.......
+</pre>
+				<p>That's all you need to use this functional my theme.</p>
+				<p><strong>This file is not recommended output data means echo and print, the script should return data in JSON format.</strong></p>
+			</li>
+			<li>
+				Usual connection script files looks like this:
+<pre class="code language-html">
+&lt;script type="text/javascript" src="js/jquery-1.4.4.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/yaadmin.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/custom.js"&gt;&lt;/script&gt;
+</pre>
+The connection is through a script looks like this:
+<pre class="code language-html">
+&lt;script type="text/javascript" src="js/js.php?js,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,yaadmin,custom"&gt;&lt;/script&gt;
+</pre>
+Examples of the use of compressor are represented in the header template.
+			</li>
+		</ol>
+		<hr>
+
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Faragly Halik</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

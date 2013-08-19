@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: Wysiwyg editors</title>
+	
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ga.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"></script>
+	-->
+	
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid-12.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/tables.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/visualize.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body>
+<div id="page-body">
+	<div id="wrapperbg">
+		<div id="wrapper">
+			<header>
+				<!-- horizontal multilevel menu [begin] -->
+				<nav id="menu">
+					<ul class="menu">
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/home.png" alt="" /></a>
+							<ul>
+								<li><a href="#">Sub Item 2</a></li>
+								<li><a href="#">Sub Item 3</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/user-1.png" alt="" /></a>
+							<ul>
+								<li class="parent"><a href="#">Sub Item 1</a>
+									<ul>
+										<li><a href="#">Sub Item 1.1</a></li>
+										<li><a href="#">Sub Item 1.2</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="#">Sub Item 2</a>
+								   <ul>
+										<li><a href="#">Sub Item 2.1</a></li>
+										<li><a href="#">Sub Item 2.2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sub Item 3</a></li>
+								<li><a href="#">Sub Item 4</a></li>
+								<li><a href="#">Sub Item 5</a></li>
+								<li><a href="#">Sub Item 6</a></li>
+								<li><a href="#">Sub Item 7</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/settings.png" alt="" /></a></li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/twitter.png" alt="" /><span>Twitter<small>@faragly</small></span></a></li>
+					</ul>
+					<div id="topnav">
+						<a href="#"><img alt="" src="images/noavatar.png" class="avatar" /></a>
+						Logged in as <strong>Admin</strong>
+						<span>|</span> <a href="#">Settings</a>
+						<span>|</span> <a href="login.html">Logout</a><br/>
+						<small>You have <a href="#"><strong>1</strong> new message!</a></small>
+					</div>
+				</nav>
+				<!-- horizontal multilevel menu [end] -->
+				
+				<!-- horizontal main tabs menu [begin] -->
+				<nav class="tabs">
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li class="current"><a href="forms.html">Forms</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="grids.html">Grids</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="filemanager.html">File manager</a></li>
+					</ul>
+				</nav>
+				<!-- horizontal main tabs menu [end] -->
+				
+			</header>
+			<div id="container">
+				<!-- main header [begin] -->
+				<header>
+					Wysiwyg editors
+					<!-- search [begin] -->
+					<form method="get" action="" id="search">
+						<input type="text" class="text" size="30" name="q" placeholder="Search" />
+					</form>
+					<!-- search [end] -->
+				</header>
+				<!-- main header [end] -->
+				
+				<div class="colmask rightmenu">
+					<div class="colleft">
+						<div class="col1wrap">
+							<div id="page" class="col1">
+								<!-- CONTENT [begin] -->
+								<!--  breadcrumbs [begin] -->
+								<div class="breadcrumb">
+									<ul>
+										<li><a href="index.html">Dashboard</a></li>
+										<li><a href="forms.html">Forms</a></li>
+										<li>Wysiwyg editors</li>
+									</ul>
+								</div>
+								<!--  breadcrumbs [end] -->
+								<div class="areatabs">
+									<ul class="tabs">
+										<li class="current"><a href="#">markItUp</a></li>
+										<li><a href="#">jWysiwyg</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+											<textarea class="textarea" id="markitUp"></textarea>
+											<div class="areatabs">
+												<ul class="tabs">
+													<li class="current"><a href="#">HTML</a></li>
+													<li><a href="#">JS</a></li>
+												</ul>
+												<div class="panes">
+													<div class="pane visible">
+														<pre class="code language-html">&lt;textarea class="textarea" id="markitUp"&gt;&lt;/textarea&gt;</pre>
+													</div>
+													<div class="pane">
+<pre class="code language-js">
+if($("#markitUp").length > 0) $.rloader([
+	{ type: 'css', src: 'modules/markitup/skins/markitup/style.css' },
+	{ type: 'css', src: 'modules/markitup/sets/default/style.css' },
+	{ type: 'js', src: 'modules/markitup/jquery.markitup.js' },
+	{ type: 'js', src: 'modules/markitup/sets/default/set.js', callback: function(){
+		$('#markitUp').markItUp(mySettings);
+	} }
+]);
+</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="pane">
+											<textarea id="wysiwyg" class="textarea" rows="5" cols="84"></textarea>
+											<div class="areatabs">
+												<ul class="tabs">
+													<li class="current"><a href="#">HTML</a></li>
+													<li><a href="#">JS</a></li>
+												</ul>
+												<div class="panes">
+													<div class="pane visible">
+														<pre class="code language-html">&lt;textarea class="textarea" id="wysiwyg" rows="5" cols="84"&gt;&lt;/textarea&gt;</pre>
+													</div>
+													<div class="pane">
+<pre class="code language-js">
+if($("#wysiwyg").length > 0) $.rloader({
+	type: 'js', 
+	src: 'js/jquery.wysiwyg.js', 
+	callback: function(){
+		$('#wysiwyg').wysiwyg();
+	}
+});
+</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+
+								
+								<!-- CONTENT [end] -->
+							</div>
+						</div>
+						<div class="col2">
+							<!-- SIDEBAR [begin] -->
+							
+							<!-- right menu [begin] -->
+							<nav class="left">
+								<ul>
+									<li><a href="forms.html">Form examples</a></li>
+									<li><a href="forms_validation.html">jQuery Form Validation</a></li>
+									<li class="current"><a href="forms_wysiwygs.html">Wysiwyg editors</a></li>
+								</ul>
+							</nav>
+							<!-- right menu [end] -->
+							
+							<!-- block with header [begin] -->
+							<div class="block">
+								<h3><span>Header</span></h3>
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block with header [end] -->
+							
+							<!-- block without header [begin] -->
+							<div class="block">
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block without header [end] -->
+							
+							<!-- SIDEBAR [end] -->
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- footer [begin] -->
+		<footer>&copy; Copyright 2010 by <a href="#">Your Company</a></footer>
+		<!-- footer [end] -->
+	</div>
+</div>
+</body>
+</html>

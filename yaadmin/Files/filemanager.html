@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: elFinder file manager</title>
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ga.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"></script>
+	-->
+	
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid-12.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/tables.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/visualize.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/>
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body>
+<div id="page-body">
+	<div id="wrapperbg">
+		<div id="wrapper">
+			<header>
+				<!-- horizontal multilevel menu [begin] -->
+				<nav id="menu">
+					<ul class="menu">
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/home.png" alt="" /></a>
+							<ul>
+								<li><a href="#">Sub Item 2</a></li>
+								<li><a href="#">Sub Item 3</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/user-1.png" alt="" /></a>
+							<ul>
+								<li class="parent"><a href="#">Sub Item 1</a>
+									<ul>
+										<li><a href="#">Sub Item 1.1</a></li>
+										<li><a href="#">Sub Item 1.2</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="#">Sub Item 2</a>
+								   <ul>
+										<li><a href="#">Sub Item 2.1</a></li>
+										<li><a href="#">Sub Item 2.2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sub Item 3</a></li>
+								<li><a href="#">Sub Item 4</a></li>
+								<li><a href="#">Sub Item 5</a></li>
+								<li><a href="#">Sub Item 6</a></li>
+								<li><a href="#">Sub Item 7</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/settings.png" alt="" /></a></li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/twitter.png" alt="" /><span>Twitter<small>@faragly</small></span></a></li>
+					</ul>
+					<div id="topnav">
+						<a href="#"><img alt="" src="images/noavatar.png" class="avatar" /></a>
+						Logged in as <strong>Admin</strong>
+						<span>|</span> <a href="#">Settings</a>
+						<span>|</span> <a href="login.html">Logout</a><br/>
+						<small>You have <a href="#"><strong>1</strong> new message!</a></small>
+					</div>
+				</nav>
+				<!-- horizontal multilevel menu [end] -->
+				
+				<!-- horizontal main tabs menu [begin] -->
+				<nav class="tabs">
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="grids.html">Grids</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li class="current"><a href="filemanager.html">File manager</a></li>
+					</ul>
+				</nav>
+				<!-- horizontal main tabs menu [end] -->
+				
+			</header>
+			<div id="container">
+				<!-- main header [begin] -->
+				<header>
+					elFinder file manager
+					<!-- search [begin] -->
+					<form method="get" action="" id="search">
+						<input type="text" class="text" size="30" name="q" placeholder="Search" />
+					</form>
+					<!-- search [end] -->
+				</header>
+				<!-- main header [end] -->
+				
+				<div id="page">
+					<div class="span-full container_12">
+						<!-- GRIDS HERE -->
+						<!--  breadcrumbs [begin] -->
+						<div class="breadcrumb">
+							<ul>
+								<li><a href="index.html">Dashboard</a></li>
+								<li>File manager</li>
+							</ul>
+						</div>
+						<!--  breadcrumbs [end] -->
+						<div id="filemanager"></div>
+						<div class="areatabs">
+							<ul class="tabs">
+								<li class="current"><a href="#">Descripton</a></li>
+								<li><a href="#">Screenshots</a></li>
+								<li><a href="#">Offsite</a></li>
+							</ul>
+							<div class="panes">
+								<div class="pane visible">
+									<p><a href="http://elrte.org/elfinder">elFinder</a> is an open-source file manager for web, written in JavaScript using jQuery UI. As you can see its creation is inspired by simplicity and convenience of Finder program used in Mac OS X operating system.</p>
+									<h3 class="line">Features</h3>
+									<ul class="list list0">
+										<li>All general operations with files and folders on a remote server (copy, move, upload, create folder/file, rename, etc.)</li>
+										<li>Two types of view: list and icons</li>
+										<li>High performance of server and client parts</li>
+										<li>Multifile upload</li>
+										<li>Standart methods of file/group selection using mouse or keyboard</li>
+										<li>Context menu</li>
+										<li>"Hot keys" for most actions</li>
+										<li>Move/Copy files with Drag &amp; Drop</li>
+										<li>Work with archives</li>
+										<li>Preview for most types of files</li>
+										<li>Edit text files and resize images</li>
+										<li>"Places" for your favorites</li>
+										<li>Calculate directory sizes</li>
+										<li>Background creation of thumbnails for image files</li>
+										<li>Easy to integrate with web editors (elRTE, CKEditor, TinyMCE)</li>
+										<li>Flexible configuration of access rights, upload file types, user interface and other</li>
+										<li>Extensibility</li>
+										<li>Simple client-server API based on JSON</li>
+									</ul>
+								</div>
+								<div class="pane">
+									<ul class="gallery type3"> 
+										<li><a rel="prettyPhoto[elfinder]" title="elFinder" href="http://elrte.org/prod/elfinder/screenshot0.png"><img alt="elFinder" src="http://elrte.org/prod/elfinder/screenshot-mini0.png" /></a></li> 
+										<li><a rel="prettyPhoto[elfinder]" title="List view and context menu" href="http://elrte.org/prod/elfinder/screenshot2.png"><img alt="List view and context menu" src="http://elrte.org/prod/elfinder/screenshot-mini2.png" /></a></li> 
+										<li><a rel="prettyPhoto[elfinder]" title="Build-in text editor" href="http://elrte.org/prod/elfinder/screenshot3.png"><img alt="Build-in text editor" src="http://elrte.org/prod/elfinder/screenshot-mini3.png" /></a></li> 
+										<li><a rel="prettyPhoto[elfinder]" title="Drag &amp; Drop" href="http://elrte.org/prod/elfinder/screenshot4.png"><img alt="Drag &amp; Drop" src="http://elrte.org/prod/elfinder/screenshot-mini4.png" /></a></li> 
+									</ul>
+								</div>
+								<div class="pane">
+									<a href="http://elrte.org/redmine/projects/elfinder/wiki/Page_index">More info and documentation</a>
+								</div>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+
+
+				
+								
+			</div>
+		</div>
+		<!-- footer [begin] -->
+		<footer>&copy; Copyright 2010 by <a href="#">Your Company</a></footer>
+		<!-- footer [end] -->
+	</div>
+</div>
+</body>
+</html>

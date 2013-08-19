@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: Tables</title>
+	
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ga.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"></script>
+	-->
+	
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid-12.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/tables.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/visualize.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body>
+<div id="page-body">
+	<div id="wrapperbg">
+		<div id="wrapper">
+			<header>
+				<!-- horizontal multilevel menu [begin] -->
+				<nav id="menu">
+					<ul class="menu">
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/home.png" alt="" /></a>
+							<ul>
+								<li><a href="#">Sub Item 2</a></li>
+								<li><a href="#">Sub Item 3</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/user-1.png" alt="" /></a>
+							<ul>
+								<li class="parent"><a href="#">Sub Item 1</a>
+									<ul>
+										<li><a href="#">Sub Item 1.1</a></li>
+										<li><a href="#">Sub Item 1.2</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="#">Sub Item 2</a>
+								   <ul>
+										<li><a href="#">Sub Item 2.1</a></li>
+										<li><a href="#">Sub Item 2.2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sub Item 3</a></li>
+								<li><a href="#">Sub Item 4</a></li>
+								<li><a href="#">Sub Item 5</a></li>
+								<li><a href="#">Sub Item 6</a></li>
+								<li><a href="#">Sub Item 7</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/settings.png" alt="" /></a></li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/twitter.png" alt="" /><span>Twitter<small>@faragly</small></span></a></li>
+					</ul>
+					<div id="topnav">
+						<a href="#"><img alt="" src="images/noavatar.png" class="avatar" /></a>
+						Logged in as <strong>Admin</strong>
+						<span>|</span> <a href="#">Settings</a>
+						<span>|</span> <a href="login.html">Logout</a><br/>
+						<small>You have <a href="#"><strong>1</strong> new message!</a></small>
+					</div>
+				</nav>
+				<!-- horizontal multilevel menu [end] -->
+				
+				<!-- horizontal main tabs menu [begin] -->
+				<nav class="tabs">
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="grids.html">Grids</a></li>
+						<li class="current"><a href="tables.html">Tables</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="filemanager.html">File manager</a></li>
+					</ul>
+				</nav>
+				<!-- horizontal main tabs menu [end] -->
+				
+			</header>
+			<div id="container">
+				<!-- main header [begin] -->
+				<header>
+					Tables
+					<!-- search [begin] -->
+					<form method="get" action="" id="search">
+						<input type="text" class="text" size="30" name="q" placeholder="Search" />
+					</form>
+					<!-- search [end] -->
+				</header>
+				<!-- main header [end] -->
+				
+				<div class="colmask rightmenu">
+					<div class="colleft">
+						<div class="col1wrap">
+							<div id="page" class="col1">
+								<!-- CONTENT [begin] -->
+								<!--  breadcrumbs [begin] -->
+								<div class="breadcrumb">
+									<ul>
+										<li><a href="index.html">Dashboard</a></li>
+										<li>Tables</li>
+									</ul>
+								</div>
+								<!--  breadcrumbs [end] -->
+								
+								<div class="areatabs">
+									<ul class="tabs">
+										<li class="current"><a href="#">Table</a></li>
+										<li><a href="#">Datatable</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+											<!-- table [end] -->
+											<table class="table">
+												<thead>
+													<tr>
+														<th class="small"><input type="checkbox" class="checkall" /></th>
+														<th class="small"><a class="action" href="#"></a></th>
+														<th>Login</th>
+														<th>First name</th>
+														<th>Last name</th>
+														<th>E-mail</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+													<tr>
+														<td class="small"><input type="checkbox" /></td>
+														<td class="small"><a class="action" href="#"></a><div class="opmenu"><ul><li><a href="#">Edit</a></li><li><a href="#">Remove</a></li></ul><div class="clear"></div><div class="foot"></div></div></td>
+														<td><a href="#">admin</a></td>
+														<td>Halik</td>
+														<td>Faragly</td>
+														<td><a href="mailto:faragly@gmail.com">faragly@gmail.com</a></td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- table [end] -->
+											<!-- table, pagination [begin] -->
+											<div class="pagination float-right">
+												<a href="#">«</a>
+												<a class="active" href="#">1</a>
+												<a href="#">2</a>
+												<a href="#">3</a>
+												<a href="#">4</a>
+												<a href="#">5</a>
+												<a href="#">6</a>
+												<a href="#">»</a>
+											</div>
+											<div class="clearfix"></div>
+											<!-- table, pagination [end] -->
+											<div class="areatabs">
+												<ul class="tabs">
+													<li class="current"><a href="#">HTML</a></li>
+													<li><a href="#">JS</a></li>
+												</ul>
+												<div class="panes">
+													<div class="pane visible">
+<pre class="code language-html">
+&lt;!-- table [end] --&gt;
+&lt;table class="infotable"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th class="small"&gt;&lt;input type="checkbox" class="checkall" /&gt;&lt;/th&gt;
+			&lt;th class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;/th&gt;
+			&lt;th&gt;Login&lt;/th&gt;
+			&lt;th&gt;First name&lt;/th&gt;
+			&lt;th&gt;Last name&lt;/th&gt;
+			&lt;th&gt;E-mail&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="small"&gt;&lt;input type="checkbox" /&gt;&lt;/td&gt;
+			&lt;td class="small"&gt;&lt;a class="action" href="#"&gt;&lt;/a&gt;&lt;div class="opmenu"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Remove&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="foot"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;a href="#"&gt;admin&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Halik&lt;/td&gt;
+			&lt;td&gt;Faragly&lt;/td&gt;
+			&lt;td&gt;&lt;a href="mailto:faragly@gmail.com"&gt;faragly@gmail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- table [end] --&gt;
+&lt;!-- table, pagination [begin] --&gt;
+&lt;div class="pagination float-right"&gt;
+	&lt;a href="#"&gt;«&lt;/a&gt;
+	&lt;a class="active" href="#"&gt;1&lt;/a&gt;
+	&lt;a href="#"&gt;2&lt;/a&gt;
+	&lt;a href="#"&gt;3&lt;/a&gt;
+	&lt;a href="#"&gt;4&lt;/a&gt;
+	&lt;a href="#"&gt;5&lt;/a&gt;
+	&lt;a href="#"&gt;6&lt;/a&gt;
+	&lt;a href="#"&gt;»&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;!-- table, pagination [end] --&gt;
+</pre>
+													</div>
+													<div class="pane">
+<pre class="code language-js">
+$(document).ready(function() {
+	/* === Tables javascripts [begin] === */
+	/* optional menu in the table to each row */
+	$("table td a.action").live("click", function(){
+		var pos = $(this).position();
+		$(this).addClass("active").next().css({top: pos.top + 24, left: pos.left}).show().find("li:last a").css("border-bottom", 0);
+		return false;
+	});
+	$("table th a.action").live("click", function(){return false;});
+	/* when you click to close the active optional menu and select box */
+	$("body").click(function(event){
+		$.each($("a.action.active"), function(){
+			$(this).removeClass("active").next().hide();
+		});
+	});
+	
+	/* the effect of zebra */
+	$("table.table tbody tr:odd").css({backgroundColor: "#fbfbfb"});
+	
+	/* Check all */
+	$('input:checkbox.checkall').click(function() {
+		$(this).parents('.table').find('input:checkbox').attr('checked', $(this).is(':checked')).parents("tr").each(function(){
+			if($(this).find('input:checkbox').is(':checked')) $(this).addClass("selected");
+			else $(this).removeClass("selected");
+		});  
+	});
+	
+	/* selection row with the active checkbox */
+	$("table.table input:checkbox").change(function(){
+		if($(this).is(':checked')) $(this).parents("tr").addClass("selected");
+		else $(this).parents("tr").removeClass("selected");
+	});
+	/* === Tables javascripts [end] === */
+});
+</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="pane">
+											<table class="table" id="dt_example"> 
+												<thead> 
+													<tr> 
+														<th>Rendering engine</th> 
+														<th>Browser</th> 
+														<th>Platform(s)</th> 
+														<th>Engine version</th> 
+														<th>CSS grade</th> 
+													</tr> 
+												</thead> 
+												<tbody> 
+													<tr class="odd gradeX"> 
+														<td>Trident</td> 
+														<td>Internet
+															 Explorer 4.0</td> 
+														<td>Win 95+</td> 
+														<td class="center"> 4</td> 
+														<td class="center">X</td> 
+													</tr> 
+													<tr class="even gradeC"> 
+														<td>Trident</td> 
+														<td>Internet
+															 Explorer 5.0</td> 
+														<td>Win 95+</td> 
+														<td class="center">5</td> 
+														<td class="center">C</td> 
+													</tr> 
+													<tr class="odd gradeA"> 
+														<td>Trident</td> 
+														<td>Internet
+															 Explorer 5.5</td> 
+														<td>Win 95+</td> 
+														<td class="center">5.5</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="even gradeA"> 
+														<td>Trident</td> 
+														<td>Internet
+															 Explorer 6</td> 
+														<td>Win 98+</td> 
+														<td class="center">6</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="odd gradeA"> 
+														<td>Trident</td> 
+														<td>Internet Explorer 7</td> 
+														<td>Win XP SP2+</td> 
+														<td class="center">7</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="even gradeA"> 
+														<td>Trident</td> 
+														<td>AOL browser (AOL desktop)</td> 
+														<td>Win XP</td> 
+														<td class="center">6</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Firefox 1.0</td> 
+														<td>Win 98+ / OSX.2+</td> 
+														<td class="center">1.7</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Firefox 1.5</td> 
+														<td>Win 98+ / OSX.2+</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Firefox 2.0</td> 
+														<td>Win 98+ / OSX.2+</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Firefox 3.0</td> 
+														<td>Win 2k+ / OSX.3+</td> 
+														<td class="center">1.9</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Camino 1.0</td> 
+														<td>OSX.2+</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Camino 1.5</td> 
+														<td>OSX.3+</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Netscape 7.2</td> 
+														<td>Win 95+ / Mac OS 8.6-9.2</td> 
+														<td class="center">1.7</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Netscape Browser 8</td> 
+														<td>Win 98SE+</td> 
+														<td class="center">1.7</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Netscape Navigator 9</td> 
+														<td>Win 98+ / OSX.2+</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.0</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">1</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.1</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">1.1</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.2</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">1.2</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.3</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">1.3</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.4</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">1.4</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.5</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">1.5</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.6</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">1.6</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.7</td> 
+														<td>Win 98+ / OSX.1+</td> 
+														<td class="center">1.7</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Mozilla 1.8</td> 
+														<td>Win 98+ / OSX.1+</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Seamonkey 1.1</td> 
+														<td>Win 98+ / OSX.2+</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Gecko</td> 
+														<td>Epiphany 2.20</td> 
+														<td>Gnome</td> 
+														<td class="center">1.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Webkit</td> 
+														<td>Safari 1.2</td> 
+														<td>OSX.3</td> 
+														<td class="center">125.5</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Webkit</td> 
+														<td>Safari 1.3</td> 
+														<td>OSX.3</td> 
+														<td class="center">312.8</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Webkit</td> 
+														<td>Safari 2.0</td> 
+														<td>OSX.4+</td> 
+														<td class="center">419.3</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Webkit</td> 
+														<td>Safari 3.0</td> 
+														<td>OSX.4+</td> 
+														<td class="center">522.1</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Webkit</td> 
+														<td>OmniWeb 5.5</td> 
+														<td>OSX.4+</td> 
+														<td class="center">420</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Webkit</td> 
+														<td>iPod Touch / iPhone</td> 
+														<td>iPod</td> 
+														<td class="center">420.1</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Webkit</td> 
+														<td>S60</td> 
+														<td>S60</td> 
+														<td class="center">413</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera 7.0</td> 
+														<td>Win 95+ / OSX.1+</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera 7.5</td> 
+														<td>Win 95+ / OSX.2+</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera 8.0</td> 
+														<td>Win 95+ / OSX.2+</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera 8.5</td> 
+														<td>Win 95+ / OSX.2+</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera 9.0</td> 
+														<td>Win 95+ / OSX.3+</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera 9.2</td> 
+														<td>Win 88+ / OSX.3+</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera 9.5</td> 
+														<td>Win 88+ / OSX.3+</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Opera for Wii</td> 
+														<td>Wii</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Nokia N800</td> 
+														<td>N800</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Presto</td> 
+														<td>Nintendo DS browser</td> 
+														<td>Nintendo DS</td> 
+														<td class="center">8.5</td> 
+														<td class="center">C/A<sup>1</sup></td> 
+													</tr> 
+													<tr class="gradeC"> 
+														<td>KHTML</td> 
+														<td>Konqureror 3.1</td> 
+														<td>KDE 3.1</td> 
+														<td class="center">3.1</td> 
+														<td class="center">C</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>KHTML</td> 
+														<td>Konqureror 3.3</td> 
+														<td>KDE 3.3</td> 
+														<td class="center">3.3</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>KHTML</td> 
+														<td>Konqureror 3.5</td> 
+														<td>KDE 3.5</td> 
+														<td class="center">3.5</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeX"> 
+														<td>Tasman</td> 
+														<td>Internet Explorer 4.5</td> 
+														<td>Mac OS 8-9</td> 
+														<td class="center">-</td> 
+														<td class="center">X</td> 
+													</tr> 
+													<tr class="gradeC"> 
+														<td>Tasman</td> 
+														<td>Internet Explorer 5.1</td> 
+														<td>Mac OS 7.6-9</td> 
+														<td class="center">1</td> 
+														<td class="center">C</td> 
+													</tr> 
+													<tr class="gradeC"> 
+														<td>Tasman</td> 
+														<td>Internet Explorer 5.2</td> 
+														<td>Mac OS 8-X</td> 
+														<td class="center">1</td> 
+														<td class="center">C</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Misc</td> 
+														<td>NetFront 3.1</td> 
+														<td>Embedded devices</td> 
+														<td class="center">-</td> 
+														<td class="center">C</td> 
+													</tr> 
+													<tr class="gradeA"> 
+														<td>Misc</td> 
+														<td>NetFront 3.4</td> 
+														<td>Embedded devices</td> 
+														<td class="center">-</td> 
+														<td class="center">A</td> 
+													</tr> 
+													<tr class="gradeX"> 
+														<td>Misc</td> 
+														<td>Dillo 0.8</td> 
+														<td>Embedded devices</td> 
+														<td class="center">-</td> 
+														<td class="center">X</td> 
+													</tr> 
+													<tr class="gradeX"> 
+														<td>Misc</td> 
+														<td>Links</td> 
+														<td>Text only</td> 
+														<td class="center">-</td> 
+														<td class="center">X</td> 
+													</tr> 
+													<tr class="gradeX"> 
+														<td>Misc</td> 
+														<td>Lynx</td> 
+														<td>Text only</td> 
+														<td class="center">-</td> 
+														<td class="center">X</td> 
+													</tr> 
+													<tr class="gradeC"> 
+														<td>Misc</td> 
+														<td>IE Mobile</td> 
+														<td>Windows Mobile 6</td> 
+														<td class="center">-</td> 
+														<td class="center">C</td> 
+													</tr> 
+													<tr class="gradeC"> 
+														<td>Misc</td> 
+														<td>PSP browser</td> 
+														<td>PSP</td> 
+														<td class="center">-</td> 
+														<td class="center">C</td> 
+													</tr> 
+													<tr class="gradeU"> 
+														<td>Other browsers</td> 
+														<td>All others</td> 
+														<td>-</td> 
+														<td class="center">-</td> 
+														<td class="center">U</td> 
+													</tr> 
+												</tbody> 
+												<tfoot> 
+													<tr> 
+														<th>Rendering engine</th> 
+														<th>Browser</th> 
+														<th>Platform(s)</th> 
+														<th>Engine version</th> 
+														<th>CSS grade</th> 
+													</tr> 
+												</tfoot> 
+											</table>
+
+											<h3 class="line marginTop-15">Javascript</h3>
+<pre class="code language-js">
+$(document).ready(function() {
+	if($("#dt_example").length > 0) $.rloader([
+		{ type: 'css', src: 'modules/datatables/css/demo_table_jui.css' },
+		{ type: 'js', src: 'modules/datatables/js/jquery.dataTables.js', callback: function(){
+			$('#dt_example').dataTable({
+				"bJQueryUI": true,
+				"sPaginationType": "full_numbers"
+			});
+		} }
+	]);
+});
+</pre>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+								
+								<!-- CONTENT [end] -->
+							</div>
+						</div>
+						<div class="col2">
+							<!-- SIDEBAR [begin] -->
+							<!-- block with header [begin] -->
+							<div class="block">
+								<h3><span>Header</span></h3>
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block with header [end] -->
+							
+							<!-- block without header [begin] -->
+							<div class="block">
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block without header [end] -->
+							
+							<!-- SIDEBAR [end] -->
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- footer [begin] -->
+		<footer>&copy; Copyright 2010 by <a href="#">Your Company</a></footer>
+		<!-- footer [end] -->
+	</div>
+</div>
+</body>
+</html>

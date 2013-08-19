@@ -1,0 +1,131 @@
+/* --------------------------------------------------------------------
+
+   FluidGrid CSS Framework
+   
+   Hubert Florin
+   couzin.hub@gmail.com
+   Copyright 2009 Hubert Florin
+   
+----------------------------------------------------------------------- */
+
+/* simple reset */
+*, .reset {
+  margin:0;
+  padding:0;
+}
+
+#page {
+  position:relative;
+  padding:15px;
+  z-index:1;
+  background-color:#fff;
+}
+
+.span-1, .span-2, .span-3, .span-4,
+.span-5, .span-6, .span-7, .span-8, 
+.span-9, .span-10, .span-11, .span-12,
+.span-13, .span-14, .span-15, .span-16,
+.span-17, .span-18, .span-19, .span-20,
+.span-21, .span-22, .span-23, .span-24 {
+  float:left;
+	/* overflow: hidden; testing if needed */
+	position:relative;
+	margin-right:2%;
+	left:2%;
+}
+.span-full {
+  width:100%;
+  float:left;
+  clear:both;
+}
+#page .alpha, 
+#page .omega {
+  margin-left:0;
+  margin-right:0;
+}
+.alpha {
+  clear:both;
+}
+.omega { 
+  float:right;
+}
+.container_12 .alpha, .container_16 .alpha, .container_24 .alpha,
+.container_12 .omega, .container_16 .omega, .container_24 .omega {
+  left:0;
+}
+
+hr { background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:1px;margin:0 0 1.45em;border:none; }
+hr.space { background:#fff;color:#fff; }
+
+.pull-1, .pull-2, .pull-3, .pull-4, 
+.pull-5, .pull-6, .pull-7, .pull-8, 
+.pull-9, .pull-10, .pull-11, .pull-12, 
+.pull-13, .pull-14, .pull-15, .pull-16, 
+.pull-17, .pull-18, .pull-19, .pull-20,
+.pull-21, .pull-22, .pull-23, .pull-24,
+.push-1, .push-2, .push-3, .push-4, 
+.push-5, .push-6, .push-7, .push-8, 
+.push-9, .push-10, .push-11, .push-12, 
+.push-13, .push-14, .push-15, .push-16, 
+.push-17, .push-18, .push-19, .push-20,
+.push-21, .push-22, .push-23, .push-24 {
+  float:left;position:relative;
+}
+
+/* visual grid */
+
+.container_12,
+.container_16,
+.container_24 {
+  clear:both;
+  position:relative;
+  float:none;
+}
+.col{
+  position:absolute;
+  bottom:0;
+  height:100%;
+  z-index:-1;
+}
+.container_12 .col { background-color:#def2ff; }
+.container_16 .col { background-color:#ffe5e5; }
+.container_24 .col { background-color:#ffecbd; }
+
+/* Clearfix for page container */
+
+.clearfix:after,
+.container_12:after,
+.container_16:after,
+.container_24:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Grid Visibility Toggle */
+
+.grid_12, .grid_16, .grid_24{
+  display:none;
+}
+.display {
+  display:block;
+}
+#switchgrid {
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index:99;
+  font-size: 11px;
+  text-decoration: none;
+  padding: 5px 10px 3px;
+  color:#fff;
+  border:1px solid #aaa;
+  background-color:#ccc;
+}
+#switchgrid:hover{
+  border:1px solid #333;
+  background-color:#777;
+  cursor:pointer;
+}

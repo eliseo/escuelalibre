@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>YaAdmin :: Gallery</title>
+	
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ga.js"></script>
+	<script type="text/javascript" src="js/jquery.visualize.js"></script>
+	<script type="text/javascript" src="js/jquery.rloader-1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.pack.js"></script>
+	<script type="text/javascript" src="js/yaadmin.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/toolbar.js"></script>
+	
+	<!-- JS Compressor
+	<script type="text/javascript" src="js/js.php?js,modernizr-1.6.min,jquery-1.4.4.min,jquery-ui-1.8.7.custom.min,jquery.flot.min,jquery.ga,jquery.visualize,jquery.rloader-1.1.min,jquery.validate.pack,yaadmin,custom,toolbar"></script>
+	-->
+	
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/fluidgrid/fluidgrid-12.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/forms.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/tables.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/visualize.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen"/>
+	
+	<!-- CSS Compressor
+	<link rel="stylesheet" type="text/css" href="css/css.php?css,reset,fluidgrid/fluidgrid,fluidgrid/fluidgrid-12,general,styles,menu,buttons,forms,tables,visualize,prettyPhoto" media="screen"/>
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.7.custom.css" media="screen"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+	<![endif]-->
+</head>
+<body>
+<div id="page-body">
+	<div id="wrapperbg">
+		<div id="wrapper">
+			<header>
+				<!-- horizontal multilevel menu [begin] -->
+				<nav id="menu">
+					<ul class="menu">
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/home.png" alt="" /></a>
+							<ul>
+								<li><a href="#">Sub Item 2</a></li>
+								<li><a href="#">Sub Item 3</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="#"><img src="images/icons/PixeloPhilia/user-1.png" alt="" /></a>
+							<ul>
+								<li class="parent"><a href="#">Sub Item 1</a>
+									<ul>
+										<li><a href="#">Sub Item 1.1</a></li>
+										<li><a href="#">Sub Item 1.2</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="#">Sub Item 2</a>
+								   <ul>
+										<li><a href="#">Sub Item 2.1</a></li>
+										<li><a href="#">Sub Item 2.2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sub Item 3</a></li>
+								<li><a href="#">Sub Item 4</a></li>
+								<li><a href="#">Sub Item 5</a></li>
+								<li><a href="#">Sub Item 6</a></li>
+								<li><a href="#">Sub Item 7</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/settings.png" alt="" /></a></li>
+						<li><a href="#"><img src="images/icons/PixeloPhilia/twitter.png" alt="" /><span>Twitter<small>@faragly</small></span></a></li>
+					</ul>
+					<div id="topnav">
+						<a href="#"><img alt="" src="images/noavatar.png" class="avatar" /></a>
+						Logged in as <strong>Admin</strong>
+						<span>|</span> <a href="#">Settings</a>
+						<span>|</span> <a href="login.html">Logout</a><br/>
+						<small>You have <a href="#"><strong>1</strong> new message!</a></small>
+					</div>
+				</nav>
+				<!-- horizontal multilevel menu [end] -->
+				
+				<!-- horizontal main tabs menu [begin] -->
+				<nav class="tabs">
+					<ul>
+						<li><a href="index.html">Dashboard</a></li>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="stats.html">Statistics</a></li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="grids.html">Grids</a></li>
+						<li><a href="tables.html">Tables</a></li>
+						<li class="current"><a href="gallery.html">Gallery</a></li>
+						<li><a href="filemanager.html">File manager</a></li>
+					</ul>
+				</nav>
+				<!-- horizontal main tabs menu [end] -->
+				
+			</header>
+			<div id="container">
+				<!-- main header [begin] -->
+				<header>
+					Gallery
+					<!-- search [begin] -->
+					<form method="get" action="" id="search">
+						<input type="text" class="text" size="30" name="q" placeholder="Search" />
+					</form>
+					<!-- search [end] -->
+				</header>
+				<!-- main header [end] -->
+				
+				<div class="colmask rightmenu">
+					<div class="colleft">
+						<div class="col1wrap">
+							<div id="page" class="col1">
+								<!-- CONTENT [begin] -->
+								<!--  breadcrumbs [begin] -->
+								<div class="breadcrumb">
+									<ul>
+										<li><a href="index.html">Dashboard</a></li>
+										<li>Gallery</li>
+									</ul>
+								</div>
+								<!--  breadcrumbs [end] -->
+								
+								
+								<div class="areatabs">
+									<ul class="tabs">
+										<li class="current"><a href="#">Preview</a></li>
+										<li><a href="#">HTML</a></li>
+										<li><a href="#">JS</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+											<!-- Gallery demo [begin] -->
+											<div class="gallery">
+												
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img1.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery]" href="http://farm5.static.flickr.com/4065/5077458865_d32f697fa4_b.jpg"><img src="images/icons/g1/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g1/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g1/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+												
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img2.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"><img src="images/icons/g1/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g1/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g1/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+												
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img3.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery]" href="http://farm5.static.flickr.com/4002/5121772470_68b7986514_b.jpg"><img src="images/icons/g1/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g1/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g1/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+												
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img4.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery]" href="http://farm2.static.flickr.com/1093/5119616455_32b150d7bc_b.jpg"><img src="images/icons/g1/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g1/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g1/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+											
+											</div>
+											<!-- Gallery demo [end] -->
+													
+										</div>
+										<div class="pane">
+<pre class="code language-html">
+&lt;!-- Gallery demo [begin] --&gt;
+&lt;div class="gallery"&gt;
+
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img1.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery]" href="http://farm5.static.flickr.com/4065/5077458865_d32f697fa4_b.jpg"&gt;&lt;img src="images/icons/g1/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g1/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g1/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img2.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"&gt;&lt;img src="images/icons/g1/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g1/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g1/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img3.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery]" href="http://farm5.static.flickr.com/4002/5121772470_68b7986514_b.jpg"&gt;&lt;img src="images/icons/g1/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g1/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g1/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img4.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery]" href="http://farm2.static.flickr.com/1093/5119616455_32b150d7bc_b.jpg"&gt;&lt;img src="images/icons/g1/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g1/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g1/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+&lt;/div&gt;
+&lt;!-- Gallery demo [end] --&gt;
+</pre>
+											
+										</div>
+										<div class="pane">
+<pre class="code language-js">
+$(document).ready(function() {
+	$(window).load(function(){ // $(window).load() for Webkit browsers
+		// center captions in gallery items	
+		$("div.gallery:not(.type2) > .item").each(function(){
+			$caption = $(this).find("div.caption");
+			$caption.css("top", function(){
+				return (($(this).parent().innerHeight()/2) - ($(this).outerHeight()/2)) +"px";
+			}).css("left", function(){
+				return (($(this).parent().innerWidth()/2) - ($(this).outerWidth()/2)) +"px";
+			}).find("li").css("opacity", 0.7).hover(function(){
+				$(this).stop().animate({ opacity: 1 }, 250);
+			},function(){
+				$(this).stop().animate({ opacity: 0.7 }, 250);
+			});
+		});
+	});
+	
+	// mouseover effect
+	$("div.gallery:not(.type2) > .item *").mouseover(function(e){
+		if($(e.target).is("img") || $(this).closest(".caption").is("div")){
+			$(this).parents(".item").find("div.caption").stop().fadeTo(250, 1);
+		}
+	})
+	// hide caption mouseout effect
+	.mouseout(function(e){
+		if($(e.target).is("img") || $(this).closest(".caption").is("div")){
+			$(this).parents(".item").find("div.caption").stop().fadeTo(250, 0);
+		}
+	});
+});
+// remove gallery item
+function removeItem(e){
+	// here you can make ajax request and remove selected images
+	$item = $(e).parents(".item");
+	$item.animate({ opacity: 0 }, 250, function(){
+		$(this).animate({ width: 0 }, 250, function(){
+			$(this).remove();
+		});
+	});
+	return false;
+}
+</pre>
+										</div>
+									</div>
+								</div>
+								
+								<div class="areatabs">
+									<ul class="tabs">
+										<li class="current"><a href="#">Preview</a></li>
+										<li><a href="#">HTML</a></li>
+										<li><a href="#">JS</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+											<!-- Gallery demo [begin] -->
+											<div class="gallery type2">
+
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img1.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery2]" href="http://farm5.static.flickr.com/4065/5077458865_d32f697fa4_b.jpg"><img src="images/icons/g2/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g2/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g2/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+												
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img2.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery2]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"><img src="images/icons/g2/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g2/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g2/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+												
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img3.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery2]" href="http://farm5.static.flickr.com/4002/5121772470_68b7986514_b.jpg"><img src="images/icons/g2/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g2/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g2/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+												
+												<!-- Gallery item [begin] -->
+												<div class="item">
+													<div>
+														<div class="inner">
+															<img src="img/img4.jpg" alt="" />
+															<div class="caption">
+																<ul>
+																	<li><a rel="prettyPhoto[gallery2]" href="http://farm2.static.flickr.com/1093/5119616455_32b150d7bc_b.jpg"><img src="images/icons/g2/zoom.png" alt="Preview" /></a></li>
+																	<li><a href="#"><img src="images/icons/g2/edit.png" alt="Edit" /></a></li>
+																	<li><a href="#" onclick="removeItem(this);"><img src="images/icons/g2/delete.png" alt="Delete" /></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Gallery item [end] -->
+												
+											</div>
+											<!-- Gallery demo [end] -->
+											
+										</div>
+										<div class="pane">
+<pre class="code language-html">
+&lt;!-- Gallery demo [begin] --&gt;
+&lt;div class="gallery type2"&gt;
+
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img1.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery2]" href="http://farm5.static.flickr.com/4065/5077458865_d32f697fa4_b.jpg"&gt;&lt;img src="images/icons/g2/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g2/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g2/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img2.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery2]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"&gt;&lt;img src="images/icons/g2/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g2/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g2/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img3.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery2]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"&gt;&lt;img src="images/icons/g2/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g2/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g2/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+	&lt;!-- Gallery item [begin] --&gt;
+	&lt;div class="item"&gt;
+		&lt;div&gt;
+			&lt;div class="inner"&gt;
+				&lt;!-- thumb image --&gt;
+				&lt;img src="img/img4.jpg" alt="" /&gt;
+				
+				&lt;!-- mouseover buttons [begin] --&gt;
+				&lt;div class="caption"&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a rel="prettyPhoto[gallery2]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"&gt;&lt;img src="images/icons/g2/zoom.png" alt="Preview" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/icons/g2/edit.png" alt="Edit" /&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href="#" onclick="removeItem(this);"&gt;&lt;img src="images/icons/g2/delete.png" alt="Delete" /&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- mouseover buttons [end] --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- Gallery item [end] --&gt;
+	
+&lt;/div&gt;
+&lt;!-- Gallery demo [end] --&gt;
+</pre>
+											
+										</div>
+										<div class="pane">
+<pre class="code language-js">
+$(document).ready(function() {
+	// mouseover effect
+	$("div.gallery.type2 > .item").mouseover(function(e){
+		$(this).closest(".item").find("div.caption").stop().animate({ opacity: 1, top: "-26px"}, 250, function(){
+			$(this).css("z-index", 1);
+		});
+	})
+	// hide caption mouseout effect
+	.mouseout(function(e){
+		if(!$(e.target).closest(".caption").is("div")){
+			$(this).find("div.caption").stop().animate({ opacity: 0, top: "3px" }, 250, function(){
+				$(this).css("z-index", -1);
+			});
+		}
+	});
+});
+// remove gallery item
+function removeItem(e){
+	// here you can make ajax request and remove selected images
+	$item = $(e).parents(".item");
+	$item.animate({ opacity: 0 }, 250, function(){
+		$(this).animate({ width: 0 }, 250, function(){
+			$(this).remove();
+		});
+	});
+	return false;
+}
+</pre>
+										</div>
+									</div>
+								</div>
+								
+								<div class="areatabs">
+									<ul class="tabs">
+										<li class="current"><a href="#">Preview</a></li>
+										<li><a href="#">HTML</a></li>
+										<li><a href="#">JS</a></li>
+									</ul>
+									<div class="panes">
+										<div class="pane visible">
+											<ul class="gallery type3">
+												<li><a rel="prettyPhoto[gallery3]" href="http://farm5.static.flickr.com/4065/5077458865_d32f697fa4_b.jpg"><img src="img/img1.jpg" alt="" /></a></li>
+												<li><a rel="prettyPhoto[gallery3]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"><img src="img/img2.jpg" alt="" /></a></li>
+												<li><a rel="prettyPhoto[gallery3]" href="http://farm5.static.flickr.com/4002/5121772470_68b7986514_b.jpg"><img src="img/img3.jpg" alt="" /></a></li>
+												<li><a rel="prettyPhoto[gallery3]" href="http://farm2.static.flickr.com/1093/5119616455_32b150d7bc_b.jpg"><img src="img/img4.jpg" alt="" /></a></li>
+											</ul>
+										</div>
+										<div class="pane">
+<pre class="code language-html">
+&lt;ul class="gallery type3"&gt;
+	&lt;li&gt;&lt;a rel="prettyPhoto[gallery3]" href="http://farm5.static.flickr.com/4065/5077458865_d32f697fa4_b.jpg"&gt;&lt;img src="img/img1.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a rel="prettyPhoto[gallery3]" href="http://farm6.static.flickr.com/5002/5192074198_4256c5487c_b.jpg"&gt;&lt;img src="img/img2.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a rel="prettyPhoto[gallery3]" href="http://farm5.static.flickr.com/4002/5121772470_68b7986514_b.jpg"&gt;&lt;img src="img/img3.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a rel="prettyPhoto[gallery3]" href="http://farm2.static.flickr.com/1093/5119616455_32b150d7bc_b.jpg"&gt;&lt;img src="img/img4.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+											
+										</div>
+										<div class="pane">
+<pre class="code language-js">
+$(document).ready(function() {
+	$("ul.gallery li a, a.zoom").each(function(){
+		$(this).prepend('&lt;span class="caption"&gt;&lt;/span&gt;');
+	});
+	
+	// mouseover effect
+	$("ul.gallery li, a.zoom").mouseover(function(){
+		$(this).find("span.caption").stop().show().animate({opacity: .6}, 250);
+	})
+	// hide caption mouseout effect
+	.mouseout(function(){
+		$(this).find("span.caption").stop().animate({opacity: 0}, 250, function(){$(this).hide();});
+	});
+});	
+</pre>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+								<!-- CONTENT [end] -->
+							</div>
+						</div>
+						<div class="col2">
+							<!-- SIDEBAR [begin] -->
+							
+							<!-- right menu [begin] -->
+							<nav class="left">
+								<ul>
+									<li class="current"><a href="index.html">Gallery</a></li>
+								</ul>
+							</nav>
+							<!-- right menu [end] -->
+							
+							<!-- block with header [begin] -->
+							<div class="block">
+								<h3><span>Header</span></h3>
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block with header [end] -->
+							
+							<!-- block without header [begin] -->
+							<div class="block">
+								<div class="bcontent">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</div>
+							</div>
+							<!-- block without header [end] -->
+							
+							<!-- SIDEBAR [end] -->
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- footer [begin] -->
+		<footer>&copy; Copyright 2010 by <a href="#">Your Company</a></footer>
+		<!-- footer [end] -->
+	</div>
+</div>
+</body>
+</html>

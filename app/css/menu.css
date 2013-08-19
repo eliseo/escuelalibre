@@ -1,0 +1,65 @@
+/*----------------------------------+
+|    Horizontal multilevel menu     |
++----------------------------------*/
+
+/* Reset */
+#menu * {margin: 0px;padding: 0px;list-style-type: none;text-decoration: none;}
+nav#menu {position:relative;height: 48px;z-index:2;/*padding-left: 20px;*/background:url("../images/navbg.png") top left repeat-x;}
+#menu ul.menu {white-space: nowrap;float:left;padding:0;margin:0;overflow:visible;}
+
+/* Geometrical arrangement */
+#menu ul.menu li {display: inline-block;height: 48px;position: relative;}
+#menu ul.menu > li > a > img {float:left;}
+#menu ul.menu > li > a > span {margin-left:5px;float:left;font-size:14px;line-height: 120%;font-weight:bold;text-shadow:1px 1px 0 rgba(255,255,255,0.5);}
+#menu ul.menu > li > a > span small {display:block;font-weight:normal;font-size:11px;}
+#menu ul.menu > li > a {padding:7px 15px 0 15px;display:inline-block;height:41px;}
+#menu ul.menu > li > a:hover, #menu ul.menu > li:hover {background:url("../images/navbg.png") bottom left repeat-x;}
+#menu ul.menu li ul {position: absolute;top: 48px;left: 0px;background-color:#fff;z-index:1000;}
+#menu ul.menu li ul ul {position: absolute;top: -1px;left: 140px;}
+
+/* Escaping style for lower levels */
+#menu ul.menu li ul li {display: block;float: none;width: auto;height: auto;line-height:24px;}
+#menu ul.menu li ul li a {color:#000;font-size:11px;font-weight:bold;}
+#menu ul.menu li ul li:hover > a, #menu ul.menu li ul li a:hover {color:#fff;background:#09729e url("../images/item-bg.png") 0 0 repeat-x;}
+#menu ul.menu li ul li a {display: block;padding:0 12px;margin: 0px;background: none;}
+#menu ul.menu li ul {width: 140px;border:1px solid #d8d8d8;}
+
+#menu li > ul {visibility: hidden;}
+#menu li:hover > ul {visibility:visible;}
+#menu ul.menu ul li.parent {background: url("../images/arrow.gif") 95% 50% no-repeat;/*margin-right: -1px;*/}
+#menu ul.menu ul li.parent > a:hover, #menu ul.menu ul li.parent:hover > a { background: url("../images/arrow.gif") 95% 50% no-repeat, #09729e url("../images/item-bg.png") 0 0 repeat-x; }
+
+
+/* ie7 */
+#menu ul.menu li {*zoom: 1;*display: inline;}
+#menu ul.menu li a {*zoom: 1;*display: inline;}
+
+#menu ul.menu-text {float:right;}
+#menu ul.menu-text li {float:left;height: 48px;margin-left:3px;}
+#menu ul.menu-text li a {display:block;height:38px;line-height:36px;margin-top:6px;padding:0 15px;}
+#menu ul.menu-text li a:hover {padding:0 14px;height:36px;margin-top:5px;background-color:#c8c8c8;border:1px solid #a7a7a7;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+
+/*---------------------------------+
+|    Horizontal main tabs menu     |
++---------------------------------*/
+
+nav.tabs {width:100%;padding-top:5px;/*background:#168ebf url("../images/pagebg.png") 0 -48px repeat-x;*/background:#09729e url("../images/header-bg.png") 0 0 repeat-x;}
+nav.tabs ul {margin:0 0 0 1px;overflow:hidden;width:100%;padding:0;}
+nav.tabs ul li {float:left;margin-right:3px;height:30px;}
+nav.tabs ul li a {padding:0 20px;line-height:25px;display:block;height:30px;color:#fff;text-decoration:none;font-size:12px;font-weight:bold;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);}
+nav.tabs ul li a:hover {background-color:rgba(255,255,255,0.2);-webkit-border-top-right-radius: 3px;-webkit-border-top-left-radius: 3px;-moz-border-radius-topright: 3px;-moz-border-radius-topleft: 3px;border-top-right-radius: 3px;border-top-left-radius: 3px;}
+.ie7 nav.tabs ul li a:hover, .ie8 nav.tabs ul li a:hover {background:url("../images/transparent.png") 0 0 repeat;}
+nav.tabs ul li.current a {color:#333;background-color:#fbfbfb;text-shadow:none;-webkit-border-top-right-radius: 3px;-webkit-border-top-left-radius: 3px;-moz-border-radius-topright: 3px;-moz-border-radius-topleft: 3px;border-top-right-radius: 3px;border-top-left-radius: 3px;}
+
+/*--------------------+
+|    Sidebar menu     |
++--------------------*/
+
+nav.left {margin: 0 -10px 5px;}
+nav.left ul{padding: 0;list-style: none;margin:0;}
+nav.left ul li {font:bold 13px Tahoma;border-top: 1px solid #fff;border-bottom: 1px solid #ccc;margin-left:1px;background-color: #f7f7f7;}
+nav.left ul li.current {margin-left:0;background-color: #fff;}
+nav.left ul li a {padding: 10px 20px;display: block;color: #333;text-shadow:1px 1px 0 #fff;text-decoration: none;}
+nav.left ul li a:hover {background-color:#fbfbfb;}
+nav.left ul li.current a {padding-left:21px;}
+nav.left ul li.current a:hover {background-color:#fff;}

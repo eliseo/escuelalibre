@@ -1,0 +1,57 @@
+/*
+|	Buttons
++------------------------------------------------------------------*/
+
+a.button{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;cursor:pointer;text-decoration:none !important;}
+a.button span{display:inline-block;background-repeat:no-repeat;}
+a.button > span{padding:0 0 0 15px;margin-top:5px;background-position: left top;}
+a.button > span > span{padding:0 20px 0 5px;height:39px;min-width:75px;clear:left;line-height:36px;text-align:center;background-position: right top;}
+a.button:hover > span{background-position:left -40px;}
+a.button:hover > span > span{background-position:right -40px;}
+a.button:active > span{background-position:left -80px;}
+a.button:active > span > span{background-position:right -80px;}
+
+a.button > span { color:#fff;text-shadow:-1px -1px 0 rgba(0,0,0,.3); }
+a.button span { background-image: url(../images/btn-sprite.png);}
+
+a.button.blue > span {background-position: left top;}
+a.button.blue > span > span {background-position: right top;}
+a.button.blue:hover > span { background-position: left -40px; }
+a.button.blue:hover > span > span { background-position: right -40px; }
+a.button.blue:active > span { background-position: left -80px;}
+a.button.blue:active > span > span { background-position: right -80px;}
+
+a.button.gray > span {background-position: left -120px;}
+a.button.gray > span > span {background-position: right -120px;}
+a.button.gray:hover > span { background-position: left -160px; }
+a.button.gray:hover > span > span { background-position: right -160px; }
+a.button.gray:active > span { background-position: left -200px;}
+a.button.gray:active > span > span { background-position: right -200px;}
+
+a.button.lightblue > span { background-position: left -600px; }
+a.button.lightblue > span > span { background-position: right -600px; }
+a.button.lightblue:hover > span { background-position: left -640px; }
+a.button.lightblue:hover > span > span { background-position: right -640px; }
+a.button.lightblue:active > span { background-position: left -680px;}
+a.button.lightblue:active > span > span { background-position: right -680px;}
+
+a.button.green > span { background-position: left -480px; }
+a.button.green > span > span { background-position: right -480px; }
+a.button.green:hover > span { background-position: left -520px; }
+a.button.green:hover > span > span { background-position: right -520px; }
+a.button.green:active > span { background-position: left -560px;}
+a.button.green:active > span > span { background-position: right -560px;}
+
+a.button.white > span { background-position: left -240px; color:#394450; text-shadow:1px 1px 0 rgba(255,255,255,.5); }
+a.button.white > span > span { background-position: right -240px; }
+a.button.white:hover > span { background-position: left -280px; }
+a.button.white:hover > span > span { background-position: right -280px; }
+a.button.white:active > span { background-position: left -320px;}
+a.button.white:active > span > span { background-position: right -320px;}
+
+a.button.red > span { background-position: left -360px; }
+a.button.red > span > span { background-position: right -360px; }
+a.button.red:hover > span { background-position: left -400px; }
+a.button.red:hover > span > span { background-position: right -400px; }
+a.button.red:active > span { background-position: left -440px;}
+a.button.red:active > span > span { background-position: right -440px;}

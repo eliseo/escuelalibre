@@ -1,0 +1,186 @@
+9-Feb-2011
+===========
+New Documents:
+ServiceAddUser.php
+controller/user.php
+adduser.php
+js/user.js
+
+9-Feb-2011
+===========
+Cambio de nombre: 
+	adduser.php -> users.php
+
+Cambios en: 
+	js/user.js
+	controller/user.js
+	includes/admin-functions.php
+	datastores/admindata.php
+	
+Se añaden archivos:
+	ServiceDelUser.php
+	
+Funcionalidades:
+	Dar de alta usuarios
+	Eliminar usuarios
+	
+10-Feb-2011
+===========
+Cambios en:
+	js/user.js
+	includes/admin-functions.php
+	datastores/admindata.php
+
+Se añaden archivos:
+	js/jquery.md5.js
+
+Funcionalidades:
+	Editar usuario
+
+
+18-Mar-2011
+===========
+Cambios en:
+	js/teachers.js
+	finalRatingService.php
+	controller/ratings.php
+	view/teacher-courses.php
+	includes/teachers-functions.php
+
+18-Mar-2011
+===========
+Mod:
+	js/teachers.js
+	js/schedules.js
+	js/user.js
+	js/admin-students.js
+	includes/admin-functions.php
+	includes/teacher-functions.php
+	users.php (Solo fue un pequeño warning de codigo en la linea 99, agregué la '@' para evitar que salga en un server con la configuracion de php en modo de depuración activado)
+	ServiceAddUser.php
+	schedules.php
+	
+22-Mar-2011
+===========
+Mod:
+	js/teachers.js
+	view/teacher-courses.php
+
+
+23-Mar-2011
+===========
+Mod: 
+	js/students.js
+	view/student-courses.php
+	view/observer-courses.php
+	students.php
+	schedules.php
+New:
+	datastores/observerdata.php
+	datastores/scheduledata.php
+
+	include/schedule-functions.php
+
+	js/observers.js
+	js/observers-students.js
+	js/student-schedules.js
+	js/admin-schedules.js
+	js/teacher-schedules.js
+
+	view/observer-students.php
+	view/teacher-students.php
+	view/admin-schedules.php
+	view/student-schedules.php
+	view/teacher-schedules.php
+
+
+26-Mar-2011
+===========
+Mod: 
+	view/menutop.php
+	ServiceUpdateUser.php
+	controllers/user.php
+	courses.php	
+	view/frontdesk-courses.php
+	students.php
+	
+
+New: 
+	js/frontdesk.js
+	js/frontdesk-students.js
+	includes/frontdesk-functions.php
+	datastores/frontdeskdata.php
+	view/frontdesk-students.php	
+	view/frontdesk-course-details.php
+
+27-Mar-2011
+===========
+
+Mod: 
+
+	includes/admin-functions.php
+	js/observers.js
+
+28-Mar-2011
+===========
+
+Mod:
+	view/teacher-students.php
+	view/teacher-courses.php
+	includes/teacher-functions.php
+	controllers/ratings.php
+	js/teachers.js
+	students.php
+	courses.php
+	finalRatingService.php
+	
+
+New: 
+	js/teacher-students.js
+	images/comment.png
+
+
+29-Mar-2011
+===========
+
+Mod:
+	includes/observer-functions.php
+	js/observers.js
+	view/observer-courses.php
+
+	view/students-courses.php
+	js/students.js
+	includes/students-functions.php
+
+09-May-2011
+===========
+Mod: 
+	ServiceUpdateUser.php
+	
+17-May-2011
+===========
+Mod:
+	js/users.js
+	include/admin-functions.php
+	view/admin-update-users.php
+	ServiceUpdateUser.php
+	ServiceAddUser.php
+	view/admin-users.php
+
+18-May-2011
+===========
+Mod:
+	view/admin-users.php
+	js/users.js
+	includes/admin-functions.php
+	view/admin-update-users.php
+	
+19-May-2011
+===========
+Mod:
+	controller/user.php
+	view/admin-update-users.php
+	includes/general-functions.php [ recuperacion de la funcion isFrontDesk() ]
+	js/user.js
+	serviceUpdateUser.php
+	usuarios.php

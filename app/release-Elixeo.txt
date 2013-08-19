@@ -1,0 +1,390 @@
+5-15 Enero
+=============
+Data Base Design
+Configuración del servidor de pruebas
+
+15 - 30 Enero
+=============
+Diseño de Estilos
+Diseño Vistas de acuerdo a estilos
+Integración de framework propietario
+Selección de módulos javascript a utilizar
+
+9-Feb-2011
+===========
+News Documents:
+classes.php //document for admin clases
+js/class.js  //script for adminis
+datastores/admindata.php //retrieve information for adminis
+includes/functions.php  
+
+10-Feb-11
+=============
+New Documents:
+menutop.php //info about top menu
+
+Modyfied documents:
+panel.php //include menutop.php
+
+11-Feb-11
+==========
+New Document
+js/jquery-ui-timepicker-addon.js //for time picker
+
+14-Feb
+======
+MOd:
+includes/admin-functions.php // modification showInfoPeriod($id) new function createPeriod
+datastores/admindata.php	// modificaion case period
+
+
+
+15-Feb
+===========
+Mod:
+datastores/admindata.php //adding new action rooms_availab
+includes/admin-functions.php // new function get_rooms_availab()
+
+
+16-Feb
+=======
+Mod:
+controller/admin-events.php //adding case "newClass"
+
+18-Feb
+=========
+Mod:
+controler/admindata.php //add case getClassList
+
+New:
+css/overlay.css			//
+
+
+21-Feb
+============
+Mod.
+courses.js  //new function for showing students except curren curse visualized
+datastores/admindata.php		//new case getstudentslist
+table priv_desc		//change column desc for type
+includes/admin-functions //new function getUsersList
+
+
+New.
+course.php //document for give specific course info
+
+22-Feb
+==========
+New.
+js/rooms.js
+rooms.php
+
+Mod.
+datastores/admindata.php //new function getRooms();
+
+New.
+modules/fullcalendar/
+rooms.php
+js/rooms.js
+
+
+24-Feb
+========
+Mod.
+includes/admin-functions.php // new class userType
+
+
+26-Feb
+=========
+Mod.
+course.php // form for creating eval to course
+courses.js //new function for validate form for creating new eval
+controller/admin-events.php // new case newEval
+includes/admin-functions.php //new function createEval
+
+
+28-Feb
+==========
+New
+====
+view/admin-courses.php		//view for admin-courses incorporated
+view/teachers-courses.php    //view for teachers courses incorporated
+view/menutop.php   //was moved from root to here and chech type of menu user
+
+Mod
+=======
+controller/auth.php //new function for logout user
+view/top-nav.php  //navitation for logout
+controller/admin-events.php //showRoomsAvailab function added id_room and all
+rooms.php  // uservalid
+
+
+fortinet,checkpoint,juniper,sonicwall 
+
+
+
+29-Feb
+=========
+Mod
+===
+courses.php
+view/menutop.php
+login.php //ading code to detect if there is cookie send user to courses.php panel default
+
+New
+===
+view/student-course.php
+
+
+02-Mar
+========
+
+New
+===
+datastores/studentdata.php
+js/students.js
+includes/student-functions.php
+includes/general-functions.php   //general functions which belongs to all type of users
+js/gm1.js
+
+Mod
+===
+users.php // add link style for overlay.css, adding includes for views, google maps app support
+
+
+03-Mar
+============
+Mod
+===
+ServiceAddUser.php // catching variables for geodata
+contoller/user.php // adding ability to insert info to geodata if enabled
+
+
+08-Mar
+=========
+New:
+	view/admin-users.php		//view for admin create users
+	view/admin-update-users.php	//view form admin update users
+
+
+
+09-Mar
+=============
+Mod
+====
+user.js  // dateFormate pref on .datepicker
+ServiceUpdateUser.php		//code for updating user
+admin-functions.php			//adding evaluation type code for the evaluations that the client needs
+
+New:
+	user.php
+	datastores/geodata.php
+	gm1.js			//new geodata user
+	gm2.js			//update geodata user
+
+
+10-marzo
+=========
+Mod:
+	users.php
+	rooms.php
+	courses.php
+	admin-functions.php
+	admindata.php
+
+New:
+	view/admin-last-users.php
+	view/twitter.php
+	students.php
+	admin-students.php
+	js/admin-students.js
+	
+
+15-Marzo
+=========
+Mod:
+	view/admin-students.php
+	
+Create:
+	gm3.js
+
+
+16-Marzo
+==========
+Mod:
+	students.php
+	admin-students.php
+	gm3.js
+	datastores/geodata.php
+	top-nav.php
+	view/teacher-courses.php /delete unnecesary js scripts
+	schedules.php
+	schedules.js
+	
+Create:
+
+17-Marzo
+=========
+Mod:
+	includes/general-functions.php  //isobserver update, new function isfrontdesk 
+	view/top-nav.php
+	view/menu-top.php
+	course.php // observer
+	datastores/admindata.php //observer
+	js/courses.js
+	controller/admin-events.php	
+	includes/admin-functions.php		
+
+
+18-Marzo
+===========
+Mod:
+	js/students.js
+	view/students-courses.php
+	includes/student-functions.php
+
+
+19-Marzo
+==========
+Mod:
+	view/student-courses.php   //ratings
+	js/students.js				//function loadRatings
+	datastores/studentdata.php	// case: ratings
+	includes/student-functions.php	//function getRatingsStudent
+
+
+
+21-Marzo
+=========
+Mod:
+	login.php
+	users.php //breadcumbs
+	view/admin-users // breadcumbs links
+	view/admin-update-users.php //bradcumbs links
+	includes/admin-functions.ophp // update for function getUsersList
+	js/courses.js //update observer functions and user functions for the last user update
+	courses.php
+	view/admin-courses.php
+	
+
+New:
+	view/admin-course-details.php
+	
+	
+
+22-Marzo
+=========
+mod:
+	students.php
+	courses.php
+	users.php
+	includes/admin-functions.php //added lines 48-64 and 74
+	view/admin-users.php //line modified 142, 144
+	js/user.js //line modified 265
+
+
+
+New:
+	view/teacher-students.php
+	view/observer-students.php
+	view/observer-courses.php
+	view/frontdesk-courses.php
+	view/frontdesk-users.php
+	
+
+23-Marzo
+========
+mod:
+	menutop.php
+	users.php
+	
+24-Marzo
+=========
+mod:
+	js/courses.js
+	view/admin-course-details.php
+	controller/admin-events.php
+	includes/admin-functions.php
+	datastores/admindata.php
+	view/admin-last-users.php
+	
+
+28-Marzo
+==========
+mod:
+	messages.php
+	courses.php
+	schedules.php
+	users.php
+	panel.php
+
+
+29-Marzo
+========
+mod:
+	panel.php  //google analytics
+	php/ajax.php //google analytics
+	
+	
+	
+HOSTING:
+=============
+link: https://www.waterhouse.mx:8443
+usuario: waterhouse.mx
+contraseña: 2712aebd
+
+DBNAME: waterhousemx
+DBUSER: waterhouse
+DBPASS: h2F83xwLV
+
+--------------------------------------------------------------------------
+
+28-Abril
+==========
+mod:
+	ServiceDelUser.php   //comment if uservalid
+	view/admin-users.php // select civil status new option : "no especificado"
+	view/admin-update-users.php // select civil statue new option: "no especificado"
+	js/courses.js		//showSelectProfesor, changing the visualization of name
+	view/admin-courses.php	//some input lablels
+	ServiceAddUser.php // just required: user, name, password
+	view/admin-users.php		//just required: user, name, password
+	includes/admin-functions	// just adding user type students. (mod. function getUsersList)
+	
+
+29-Abril
+=========
+mod:
+	view/admin-courses.php	//modifying table list courses
+	js/courses.js			// new function eliminar
+	includes/admin-functions.php	// modifying class fcourse to deleting courses
+	controller/admin-events.php		// new case delCourse
+	
+	
+2-Mayo
+======
+new:
+	js/jquery.form.js
+	
+mod:
+	courses.php
+	fileService.php
+
+------------no actualizado waterhouse
+3-Mayo
+===========
+	new:
+		css/custom.css		//new style for image profile and others
+		controller/pic_upload.php
+		pic-profile.php						//new
+		
+	mod:
+		users.php
+		view/admin-update-users.php			//image profile
+		js/user.js
+		includes/general-functions.php		//new and update image profile
+		
+		fileService.php						//error getting id_course
+		view/teacher-courses.php			//error input type hidden id_course without  a value
+		js/teachers.js						//attr value to input hidden in function cargarListaDocumentos
+
+		

@@ -1,0 +1,55 @@
+/*------------------+
+|      Search       |
++------------------*/
+
+#search {position: absolute;right: 10px;top: 10px;}
+#search input.text {background:url("../images/search.png") 98% 50% no-repeat, #fff url("../images/inputbg.png") 0 0 repeat-x;}
+
+/*------------------+
+|   Form elements   |
++------------------*/
+
+input.text {height:20px;padding:4px 5px;background:#fff url("../images/inputbg.png") 0 0 repeat-x;border:1px solid #d0d0d0;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.ie7 input.text, .ie8 input.text { padding-top:6px;height:18px; }
+input.text:focus {border:1px solid #849fb3;box-shadow:0px 0px 5px #c9d2d9;-webkit-box-shadow:0px 0px 5px #c9d2d9;-moz-box-shadow:0px 0px 5px #c9d2d9;}
+input.text:disabled {opacity:.75;filter:alpha(opacity=75);}
+input.text.small {width:33%;}
+input.text.half {width:49%;}
+input.text.full {width:99%;}
+input.text.full96 {width:96%;}
+input.text.error {border:1px solid #f99292;}
+input.text.error:focus {border:1px solid #f03e3e;box-shadow:0px 0px 5px #f4cece;-webkit-box-shadow:0px 0px 5px #f4cece;-moz-box-shadow:0px 0px 5px #f4cece;}
+input.text + span.note { line-height: 30px; color: #757575; font-size: 11px; font-weight: bold; padding-left: 10px; vertical-align: middle; text-shadow: 1px 1px 0 rgba(255,255,255,.5);  }
+input.text + span.note.error {color:#da3737;}
+
+textarea.textarea {width:98%;height:230px;/*background:url("../images/textarea-bg.png") 0 0 no-repeat;border:none;margin:0;padding:10px;*/overflow:hidden;padding:0.5em;margin-bottom:10px;background:#fff url("../images/inputbg.png") 0 0 repeat-x;border:1px solid #d0d0d0;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+textarea.textarea:focus {/*background-position:0 100%;*/border:1px solid #849fb3;box-shadow:0px 0px 5px #c9d2d9;-webkit-box-shadow:0px 0px 5px #c9d2d9;-moz-box-shadow:0px 0px 5px #c9d2d9;}
+textarea.textarea.full96 {width:96%;}
+div.checkbox {width:16px;height:16px;margin-right:5px;position:relative;top:2px;background:url("../images/checkbox.png") 0 0 no-repeat;display:inline-block;}
+div.checkbox.checked {background-position:0 100%;}
+form label {display:inline-block;margin-bottom:5px;}
+form p {margin:0 0 15px 0 !important;}
+em.box {padding: 0px 3px;border: 1px dotted #aaaaaa;background: #f5f6f7;font-family: "Courier New", Courier, monospace;font-style: normal;white-space: nowrap;/*display:none;*/}
+form .note {color:#757575;font-size:11px;font-weight:bold;padding-left:10px;vertical-align:middle;}
+
+
+/* forms */
+select.select {/*width:310px;margin:0 0 10px 0;font:bold 11px Tahoma,Helvetica,sans-serif;*/height:26px;color:#343434;padding:5px 5px 5px 15px;}
+select.select:focus, select.select:active {outline:none;}
+select.select optgroup {padding: 5px 0;font-weight:bold;text-indent:15px;}
+select.select option {padding: 5px 15px;font-weight:normal;}
+select.select optgroup option {text-indent:10px;}
+
+.form label, .form .label {color:#808080;display:block;font-weight:normal;margin-bottom:0.5em;}
+.form fieldset {border:0 none;border-top:1px solid #ddd;margin:10px 0;padding:10px 0;position:relative;}
+.form legend {background:#fff;color:#93BB3A;font-size: 12px;font-weight:bold;padding:0 6px 0 0;}
+.form .colorSelector + input.text { display: inline-block; margin-left: 5px; position: relative; top: 3px; }
+.form label.inline,.form .label.inline {display: inline;float: none;margin: 0;font-weight: normal;}
+.form label input, .form .label input {display: inline;}
+.form input[type=radio] + label,.form input[type=checkbox] + label,.form .checkbox + label {color: #333333;font-weight: normal;display: inline;margin-bottom: 0;padding-right: 0.5em;vertical-align:middle;}
+.form div.checkbox + label {position:relative;top:-2px;}
+.form .input-type-check-label {color: #333333;font-weight: normal;display: inline;margin-bottom: 0;padding-right: 0.5em;}
+.form input[type=radio] + label:last-child,.form input[type=checkbox] + label:last-child {padding-right: 0;}
+.inputs-grey-bg {display: block;line-height: 0.9em;padding:5px 10px;margin:0;background: #f6f4f4;border: 1px solid #d0d0d0;border-top-color:#ebebeb;border-left-color:#ebebeb;-moz-border-radius: 0.25em;-webkit-border-radius: 0.25em;-webkit-background-clip: padding-box;border-radius: 0.25em;padding-left: 0.75em;padding-right: 0.75em;}
+.form input[type=radio],.form input[type=checkbox] {vertical-align:middle;margin:3px;padding: 0;}
+.form div.line { margin: 0 0 10px 0; }
